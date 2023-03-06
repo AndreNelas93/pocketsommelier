@@ -26,6 +26,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_06_164743) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+ActiveRecord::Schema[7.0].define(version: 2023_03_06_165341) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "recipes", force: :cascade do |t|
+    t.string "title"
+    t.string "ingredients"
+    t.text "instructions"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+
   end
 
 end
