@@ -10,12 +10,54 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema[7.0].define(version: 2023_03_06_170140) do
-
-ActiveRecord::Schema[7.0].define(version: 2023_03_06_164743) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_06_172936) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "pairings", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "recipe_id", null: false
+    t.bigint "user_wine_id", null: false
+    t.boolean "favorite"
+    t.boolean "done"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_pairings_on_recipe_id"
+    t.index ["user_id"], name: "index_pairings_on_user_id"
+    t.index ["user_wine_id"], name: "index_pairings_on_user_wine_id"
+  end
+
+  create_table "recipe_tags", force: :cascade do |t|
+    t.bigint "tag_id", null: false
+    t.bigint "recipe_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_recipe_tags_on_recipe_id"
+    t.index ["tag_id"], name: "index_recipe_tags_on_tag_id"
+  end
+
+  create_table "recipes", force: :cascade do |t|
+    t.string "title"
+    t.string "ingredients"
+    t.text "instructions"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_wines", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "wine_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_user_wines_on_user_id"
+    t.index ["wine_id"], name: "index_user_wines_on_wine_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -29,19 +71,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_06_164743) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_06_165341) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
-  create_table "recipes", force: :cascade do |t|
-    t.string "title"
-    t.string "ingredients"
-    t.text "instructions"
+  create_table "wine_tags", force: :cascade do |t|
+    t.bigint "tag_id", null: false
+    t.bigint "wine_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-
+    t.index ["tag_id"], name: "index_wine_tags_on_tag_id"
+    t.index ["wine_id"], name: "index_wine_tags_on_wine_id"
   end
 
   create_table "wines", force: :cascade do |t|
@@ -54,4 +92,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_06_165341) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "pairings", "recipes"
+  add_foreign_key "pairings", "user_wines"
+  add_foreign_key "pairings", "users"
+  add_foreign_key "recipe_tags", "recipes"
+  add_foreign_key "recipe_tags", "tags"
+  add_foreign_key "user_wines", "users"
+  add_foreign_key "user_wines", "wines"
+  add_foreign_key "wine_tags", "tags"
+  add_foreign_key "wine_tags", "wines"
 end
