@@ -1,0 +1,14 @@
+.round-button {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: $buttons;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-icon {
+  color: white;
+  height: 15px;
+}
