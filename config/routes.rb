@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'pairings/show'
+  get 'pairings/create'
+  get 'pairings/update'
   devise_for :users
   root "pages#home"
   get '/pair_wine', to: 'pages#pair_wine'
