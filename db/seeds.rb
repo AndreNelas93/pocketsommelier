@@ -200,7 +200,7 @@ pairing5 = Pairing.create(
 )
 
 
-#TAGS
+#TAGSrails 
 beef = Tag.create(name: "beef")
 wine_tag_1 = WineTag.create(wine: titan, tag: beef)
 wine_tag_2 = WineTag.create(wine: cartuxa, tag: beef)
