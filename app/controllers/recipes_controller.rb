@@ -1,8 +1,7 @@
 class RecipesController < ApplicationController
   def index
-    @wine = Wine.find(title: params[:wine])
+    @wine = Wine.find_by(name: params[:wine])
     @tags = @wine.tags
-    @recipes = Recipe.all #TO DO - Recipe.where?
   end
 
   def show
