@@ -6,7 +6,6 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :first_name, presence: true, uniqueness: { scope: :last_name, message: "Combination of first and last name already been used" }
 
-  has_many :pairings
-  has_many :user_wines
-  has_many :wines, through: :user_wines
+  has_many :pairings, dependent: :destroy
+  has_many :wines, through: :pairings
 end

@@ -17,14 +17,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_06_172936) do
   create_table "pairings", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "recipe_id", null: false
-    t.bigint "user_wine_id", null: false
+    t.bigint "wine_id", null: false
     t.boolean "favorite"
     t.boolean "done"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["recipe_id"], name: "index_pairings_on_recipe_id"
     t.index ["user_id"], name: "index_pairings_on_user_id"
-    t.index ["user_wine_id"], name: "index_pairings_on_user_wine_id"
+    t.index ["wine_id"], name: "index_pairings_on_wine_id"
   end
 
   create_table "recipe_tags", force: :cascade do |t|
@@ -48,15 +48,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_06_172936) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "user_wines", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "wine_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_user_wines_on_user_id"
-    t.index ["wine_id"], name: "index_user_wines_on_wine_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -93,12 +84,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_06_172936) do
   end
 
   add_foreign_key "pairings", "recipes"
-  add_foreign_key "pairings", "user_wines"
   add_foreign_key "pairings", "users"
+  add_foreign_key "pairings", "wines"
   add_foreign_key "recipe_tags", "recipes"
   add_foreign_key "recipe_tags", "tags"
-  add_foreign_key "user_wines", "users"
-  add_foreign_key "user_wines", "wines"
   add_foreign_key "wine_tags", "tags"
   add_foreign_key "wine_tags", "wines"
 end
