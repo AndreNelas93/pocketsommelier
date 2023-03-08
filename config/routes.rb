@@ -19,7 +19,8 @@ Rails.application.routes.draw do
   resources :wines, only: [:index, :show]
 
   get '/profile', to: 'pages#profile'
-  get '/cellar', to: 'pairings#cellar'
+  get '/cellar', to: 'pages#cellar'
+  get '/pairings', to: 'pairings#pairings'
   get '/pairings/wines/:wine_id/recipes', to: 'recipes#paired_with_wine'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

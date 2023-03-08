@@ -1,6 +1,6 @@
 class PairingsController < ApplicationController
 
-  def cellar
+  def pairings
     @pairings = Pairing.all
   end
 
@@ -12,7 +12,7 @@ class PairingsController < ApplicationController
     @pairing.done = true
 
     if @pairing.save
-      redirect_to cellar_path
+      redirect_to pairings_path
     else
       render "recipes/index", status: :unprocessable_entity
     end
@@ -23,7 +23,7 @@ class PairingsController < ApplicationController
     @pairing.user = current_user
     @pairing.favorite = true
     if @pairing.save
-      redirect_to cellar_path
+      redirect_to pairings_path
     else
       render "recipes/index", status: :unprocessable_entity
     end

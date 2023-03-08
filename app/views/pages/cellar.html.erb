@@ -1,0 +1,11 @@
+<h1>Cellar</h1>
+
+<% @wines.each do |wine| %>
+    <div style="background: gray; padding: 12px; margin-bottom: 12px">
+      <h3><%= wine.name %></h3>
+      <h3><%= wine.year %></h3>
+      <h3><%= wine.producer %></h3>
+      <h3><%= wine.region %></h3>
+      <h3><%= wine.country %></h3>
+    </div>
+  <% end %>

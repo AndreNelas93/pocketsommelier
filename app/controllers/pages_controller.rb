@@ -8,6 +8,9 @@ class PagesController < ApplicationController
   end
 
   def pair_wine
+  end
+
+  def cellar
     @wines = Wine.all
   end
 
