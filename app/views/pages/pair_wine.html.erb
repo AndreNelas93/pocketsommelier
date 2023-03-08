@@ -1,6 +1,17 @@
-<h1>Pair Wine</h1>
 
-<%= form_with url: recipes_path, method: :get, data: { turbo: false } do |f| %>
-  <%= f.collection_select(:wine, @wines, :name, :name, :prompt => "") %>
-  <%= f.submit "Pair" %>
-<% end %>
+<%= image_tag "wine-taste.jpg", class:"banner" %>
+
+
+<div class="container-pair-h1">
+  <h1>Pair Wine</h1>
+</div>
+<div class="container">
+  <%= form_with url: recipes_path, method: :get, data: { turbo: false } do |f| %>
+  <div class="d-flex justify-content-center">
+    <%= f.collection_select(:wine, @wines, :name, :name, :prompt => "", class: "") %>
+  </div>
+  <div class="d-flex justify-content-center">
+    <%= f.submit "Pair", class:"btn-large mt-5" %>
+  </div>
+  <% end %>
+</div>
