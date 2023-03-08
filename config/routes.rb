@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'pairings/show'
+  get 'pairings/index'
   get 'pairings/create'
   get 'pairings/update'
   devise_for :users
@@ -9,7 +9,12 @@ Rails.application.routes.draw do
 
   resources :recipes, only: [:index, :show]
 
-  resources :pairings, only: [:create, :update]
+  resources :pairings, only: [:update] do
+    collection do
+      post "add_to_wishlist"
+      post "add_to_done"
+    end
+  end
 
   resources :wines, only: [:index, :show]
 

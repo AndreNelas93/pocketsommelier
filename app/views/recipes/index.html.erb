@@ -2,6 +2,18 @@
 
 <% @tags.each do |tag| %>
   <% tag.recipes.each do |recipe| %>
-    <%= recipe.title %>
+    <div style="background: gray; padding: 12px">
+      <h3><%= recipe.title %></h3>
+      <%= form_with url: add_to_wishlist_pairings_path, method: "POST", data: { turbo: false } do |f| %>
+        <%= f.hidden_field :wine_id, as: :hidden, value: @wine.id %>
+        <%= f.hidden_field :recipe_id, as: :hidden, value: recipe.id %>
+        <%= f.button "Add to Wishlist" %>
+      <% end %>
+      <%= form_with url: add_to_done_pairings_path, method: "POST", data: { turbo: false } do |f| %>
+        <%= f.hidden_field :wine_id, as: :hidden, value: @wine.id %>
+        <%= f.hidden_field :recipe_id, as: :hidden, value: recipe.id %>
+        <%= f.button "Pair" %>
+      <% end %>
+    </div>
   <% end %>
 <% end %>

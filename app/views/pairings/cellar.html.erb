@@ -1,0 +1,8 @@
+<h1> My Pairings </h1>
+
+<% @pairings.each do |pairing| %>
+    <div style="background: gray; padding: 12px; margin-bottom: 12px">
+      <h3><%= pairing.wine.name %></h3>
+      <h3><%= pairing.recipe.title %></h3>
+    </div>
+  <% end %>
