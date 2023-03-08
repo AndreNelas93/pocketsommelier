@@ -1,8 +1,16 @@
-<h2><%= wine.name %></h2>
-      <p><strong>Year:</strong> <%= wine.year %></p>
-      <p><strong>Country:</strong> <%= wine.country %></p>
-      <p><strong>Region:</strong> <%= wine.region %></p>
-      <p><strong>Producer:</strong> <%= wine.producer %></p>
+<h2><%= @wine.name %></h2>
+      <p><strong>Year:</strong> <%= @wine.year %></p>
+      <p><strong>Country:</strong> <%= @wine.country %></p>
+      <p><strong>Region:</strong> <%= @wine.region %></p>
+      <p><strong>Producer:</strong> <%= @wine.producer %></p>
 
-<button type="button">Pair</button>
-<button type="button">Save</button>
+      <%= form_with url: add_to_wishlist_pairings_path, method: "POST", data: { turbo: false } do |f| %>
+        <%= f.hidden_field :wine_id, as: :hidden, value: @wine.id %>
+        <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
+        <%= f.button "Save" %>
+      <% end %>
+      <%= form_with url: add_to_done_pairings_path, method: "POST", data: { turbo: false } do |f| %>
+        <%= f.hidden_field :wine_id, as: :hidden, value: @wine.id %>
+        <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
+        <%= f.button "Pair" %>
+      <% end %>

@@ -3,7 +3,7 @@
 <% @tags.each do |tag| %>
   <% tag.recipes.each do |recipe| %>
     <div style="background: gray; padding: 12px">
-      <h3><%= recipe.title %></h3>
+      <h3><%= link_to recipe.title, recipe_path(recipe, wine_id: @wine) %></h3>
       <%= form_with url: add_to_wishlist_pairings_path, method: "POST", data: { turbo: false } do |f| %>
         <%= f.hidden_field :wine_id, as: :hidden, value: @wine.id %>
         <%= f.hidden_field :recipe_id, as: :hidden, value: recipe.id %>
