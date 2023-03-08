@@ -19,3 +19,9 @@ h1 {
   font-weight: 600;
   font-size: 28px;
 }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
