@@ -1,7 +1,11 @@
 class PairingsController < ApplicationController
 
-  def pairings
-    @pairings = Pairing.all
+  def index
+    @pairings = current_user.pairings
+  end
+
+  def show
+    @pairing = Pairing.find(params[:id])
   end
 
   def add_to_done
@@ -12,7 +16,7 @@ class PairingsController < ApplicationController
     @pairing.done = true
 
     if @pairing.save
-      redirect_to pairings_path
+      redirect_to pairing_path(@pairing)
     else
       render "recipes/index", status: :unprocessable_entity
     end
@@ -23,7 +27,9 @@ class PairingsController < ApplicationController
     @pairing.user = current_user
     @pairing.favorite = true
     if @pairing.save
-      redirect_to pairings_path
+      @wine = @pairing.wine
+      @tags = @pairing.wine.tags
+      render "recipes/index"
     else
       render "recipes/index", status: :unprocessable_entity
     end
