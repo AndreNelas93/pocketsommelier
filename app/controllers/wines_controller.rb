@@ -5,5 +5,7 @@ class WinesController < ApplicationController
   end
 
   def show
+    @wine = Wine.find(params[:id])
+    @recipe = Recipe.find(params[:recipe_id])
   end
 end
