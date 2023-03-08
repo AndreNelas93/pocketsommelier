@@ -1,0 +1,22 @@
+<div class="navbar-app">
+  <% if user_signed_in? %>
+  <div class="icons-container">
+    <%= link_to root_path do %>
+      <%= icon('fa-solid', 'house', class: ("active-icon" if action_name == "home"))%>
+    <% end %>
+    <%= link_to root_path do %>
+      <%= icon('fa-solid', 'wine-bottle', class: ("active-icon" if action_name == "index" && controller_name == "wines"))%>
+    <% end %>
+    <%= link_to root_path do %>
+      <%= icon('fa-solid', 'heart', class: ("active-icon" if action_name == "index" && controller_name == "wines"))%>
+    <% end %>
+    <%= link_to profile_path do %>
+      <%= icon('fa-solid', 'user', class: ("active-icon" if action_name == "profile"))%>
+    <% end %>
+  </div>
+  <% else %>
+    <%= link_to root_path do %>
+      <%= icon('fa-solid', 'wine-bottle', class: ("active-icon" if action_name == "index" && controller_name == "wines"))%>
+    <% end %>
+  <% end %>
+</div>

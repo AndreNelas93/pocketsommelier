@@ -1,14 +1,21 @@
 .round-button {
   width: 38px;
   height: 38px;
-  border-radius: 50%;
+  border-radius: 2rem;
   background-color: $buttons;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: $fontcolor;
+  margin: 0 8px 0 8px;
 }
 
 .button-icon {
   color: white;
   height: 15px;
+}
+
+.round-button:hover {
+  background-color: $selected-icons;
+  color: white;
 }
