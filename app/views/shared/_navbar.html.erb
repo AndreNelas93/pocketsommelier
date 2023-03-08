@@ -4,11 +4,11 @@
     <%= link_to root_path do %>
       <%= icon('fa-solid', 'house', class: ("active-icon" if action_name == "home"))%>
     <% end %>
-    <%= link_to root_path do %>
-      <%= icon('fa-solid', 'wine-bottle', class: ("active-icon" if action_name == "index" && controller_name == "wines"))%>
+    <%= link_to cellar_path do %>
+      <%= icon('fa-solid', 'wine-bottle', class: ("active-icon" if action_name == "cellar" && controller_name == "pages"))%>
     <% end %>
     <%= link_to root_path do %>
-      <%= icon('fa-solid', 'heart', class: ("active-icon" if action_name == "index" && controller_name == "wines"))%>
+      <%= icon('fa-solid', 'heart', class: ("active-icon" if action_name == "pairings" && controller_name == "pairings"))%>
     <% end %>
     <%= link_to profile_path do %>
       <%= icon('fa-solid', 'user', class: ("active-icon" if action_name == "profile"))%>
