@@ -1,4 +1,4 @@
-<div class="container mt-5 w-75">
+<div class="container mt-5">
   <h1 id="brand-h1">Pocket Sommelier</h1>
 </div>
 <div class="card-container">
@@ -7,18 +7,20 @@
       <%= image_tag "wines.jpg" %>
       <div class="card-product-infos">
         <h2>Pair Wine</h2>
-        <p>Find the perfect<strong>recipe</strong> for your wine.</p>
+        <p>Find the perfect<strong> recipe</strong> for your wine.</p>
       </div>
     </div>
   <% end %>
 
   <%= link_to pair_recipe_path do %>
     <div class="card-product">
-      <%= image_tag "wines.jpg" %>
+      <%= image_tag "recipes.jpg" %>
       <div class="card-product-infos">
         <h2>Pair Recipe</h2>
-        <p>Find the perfect<strong>wine</strong> for your recipe.</p>
+        <p>Find the perfect<strong> wine</strong> for your recipe.</p>
       </div>
     </div>
   <% end %>
 </div>
+
+<%# <%= image_tag "logofabio.png", style:"height: 100px;" %>
