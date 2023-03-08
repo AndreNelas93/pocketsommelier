@@ -8,7 +8,7 @@
 <div class="container">
   <%= form_with url: recipes_path, method: :get, data: { turbo: false } do |f| %>
   <div class="d-flex justify-content-center">
-    <%= f.collection_select(:wine, @wines, :name, :name, :prompt => "", class: "") %>
+    <%= f.collection_select(:wine, @wines, :name, :name, :prompt => "") %>
   </div>
   <div class="d-flex justify-content-center">
     <%= f.submit "Pair", class:"btn-large mt-5" %>
