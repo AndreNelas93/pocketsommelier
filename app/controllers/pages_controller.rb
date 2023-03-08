@@ -5,9 +5,11 @@ class PagesController < ApplicationController
   end
 
   def pair_recipe
+    @recipes = Recipe.all
   end
 
   def pair_wine
+    @wines = Wine.all
   end
 
   def cellar
