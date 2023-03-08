@@ -1,7 +1,14 @@
-  <h2><%= recipe.title %></h2>
-      <p><strong>Ingredients:</strong> <%= recipe.ingredients %></p>
-      <p><strong>Instructions:</strong> <%= recipe.instructions %></p>
+  <h2><%= @recipe.title %></h2>
+      <p><strong>Ingredients:</strong> <%= @recipe.ingredients %></p>
+      <p><strong>Instructions:</strong> <%= @recipe.instructions %></p>
 
-<button type="button">Pair</button>
-<button type="button">Save</button>
-
+      <%= form_with url: add_to_wishlist_pairings_path, method: "POST", data: { turbo: false } do |f| %>
+        <%= f.hidden_field :wine_id, as: :hidden, value: @wine.id %>
+        <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
+        <%= f.button "Save" %>
+      <% end %>
+      <%= form_with url: add_to_done_pairings_path, method: "POST", data: { turbo: false } do |f| %>
+        <%= f.hidden_field :wine_id, as: :hidden, value: @wine.id %>
+        <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
+        <%= f.button "Pair" %>
+      <% end %>
