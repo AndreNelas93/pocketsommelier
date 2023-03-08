@@ -1,6 +1,6 @@
 <h1>Pair Wine</h1>
 
 <%= form_with url: recipes_path, method: :get, data: { turbo: false } do |f| %>
-  <%= f.text_field :wine %>
+  <%= f.collection_select(:wine, @wines, :name, :name, :prompt => "") %>
   <%= f.submit "Pair" %>
 <% end %>
