@@ -46,8 +46,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_115800) do
     t.bigint "user_id", null: false
     t.bigint "recipe_id", null: false
     t.bigint "wine_id", null: false
-    t.boolean "favorite", default: false
-    t.boolean "done", default: true
+    t.boolean "favorite"
+    t.boolean "done"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["recipe_id"], name: "index_pairings_on_recipe_id"
