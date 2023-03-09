@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require 'open-uri'
+
 Wine.destroy_all
 Recipe.destroy_all
 Pairing.destroy_all
@@ -466,7 +468,7 @@ lasagna.save
 
 puts "recipe created"
 
-ameijoas_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678382716/pocket_sommelier/La-Braciera_ameijoas-Italiana_Neuton-Araujo_jkvvmo.webp")
+ameijoas_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678388077/pocket_sommelier/ameijoas-a-bulhao-pato_khuern.jpg")
 ameijoas = Recipe.create(
   title: "500g Ameijoas Branca, 2 garlic cloves, 3tbsp olive oil, Juice of half a lemon, Salt, Black pepper, White wine, Fresh cilantro, Fresh bread",
   ingredients: "ameijoas Dough, Tomato Sauce, Mozzarella, Toppings of your choice",
