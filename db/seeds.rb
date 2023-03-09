@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require 'open-uri'
 
 Wine.destroy_all
 Recipe.destroy_all
@@ -14,185 +15,282 @@ Tag.destroy_all
 
 #WINES
 
+titan_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678374673/pocket_sommelier/YHxp00K1R4W6qQ7ZJLrX_Q_pb_x960_qpbsup.png")
 titan = Wine.create(
   name: "Titan of Douro",
   year: 2017,
   country: "Portugal",
   region: "Douro",
   producer: "Titan of Douro",
-  type: 'Red',
+  color: 'Red',
   grapes: 'Touriga Nacional, Touriga Franca, Tinta Roriz'
 )
+titan.photo.attach(io: titan_photo, filename: "titan-wine", content_type: "image/png")
+titan.save
 
 puts "wine created"
 
+planalto_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678375208/pocket_sommelier/B-h_w0uERL2kCPPIlmWIIg_pb_x960_batwuv.png")
 planalto = Wine.create(
   name: "Planalto",
   year: 2020,
   country: "Portugal",
   region: "Douro",
   producer: "Casa Ferreirinha",
-  type: 'White',
+  color: 'White',
   grapes: 'Viosinho, Malvasia Fina, Gouveio'
 )
+planalto.photo.attach(io: planalto_photo, filename: "planalto-wine", content_type: "image/png")
+planalto.save
 
 puts "wine created"
 
+cartuxa_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678375281/pocket_sommelier/DJLphl8fQn6SE1HX_S0yAQ_pb_x960_ialiwi.png")
 cartuxa = Wine.create(
   name: "Cartuxa Colheita",
   year: 2017,
   country: "Portugal",
   region: "Alentejo",
   producer: "Cartuxa",
-  type: 'Red',
+  color: 'Red',
   grapes: 'Alicante Bouschet, Aragonez, Trincadeira'
 )
+cartuxa.photo.attach(io: cartuxa_photo, filename: "cartuxa-wine", content_type: "image/png")
+cartuxa.save
 
 puts "wine created"
 
+deu_la_deu_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678375418/pocket_sommelier/-TvnnKWbQR-FI9bef7trGg_pb_x960_c7q5gz.png")
 deu_la_deu = Wine.create(
   name: "Deu La Deu",
   year: 2021,
   country: "Portugal",
   region: "Vinho Verde",
   producer: "Adega de Monção",
-  type: 'White',
+  color: 'White',
   grapes: 'Alvarinho'
 )
+deu_la_deu.photo.attach(io: deu_la_deu_photo, filename: "deu_la_deu-wine", content_type: "image/png")
+deu_la_deu.save
 
 puts "wine created"
 
+marialva_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678375458/pocket_sommelier/MYwpgOOTSdSMDMx-AgYkLg_pb_x960_zezroc.png")
 marialva = Wine.create(
   name: "Marquês de Marialva Grande Reserva",
   year: 2011,
   country: "Portugal",
   region: "Bairrada",
   producer: "Adega Cooperativa de Cantanhede",
-  type: 'Red',
+  color: 'Red',
   grapes: 'Baga, Touriga Nacional'
 )
+marialva.photo.attach(io: marialva_photo, filename: "marialva-wine", content_type: "image/png")
+marialva.save
 
 puts "wine created"
 
-pacheca_superior = Wine.create(
+pacheca_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678375537/pocket_sommelier/tXf5ie7IR4O0fwLpP1Pcgg_pb_x960_xhls5o.png")
+pacheca = Wine.create(
   name: "Pacheca Douro Superior",
   year: 2019,
   country: "Portugal",
   region: "Douro",
   producer: "Pacheca",
-  type: 'Red',
+  color: 'Red',
   grapes: 'Touriga Nacional, Touriga Franca, Tinta Roriz, Tinta Barroca'
 )
+pacheca.photo.attach(io: pacheca_photo, filename: "pacheca-wine", content_type: "image/png")
+pacheca.save
 
 puts "wine created"
 
+sossego_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678375600/pocket_sommelier/J19Z9itaTuemRg31IAkdhw_pb_x960_s058kl.png")
 sossego = Wine.create(
   name: "Sossego",
   year: 2020,
   country: "Portugal",
   region: "Alentejo",
   producer: "Herdade do Peso",
-  type: 'Red',
+  color: 'Red',
   grapes: 'Touriga Nacional, Touriga Franca, Tinta Roriz, Tinta Barroca'
 )
+sossego.photo.attach(io: sossego_photo, filename: "sossego-wine", content_type: "image/png")
+sossego.save
 
 puts "wine created"
 
+terra_a_terra_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678375676/pocket_sommelier/d50y5L17RoeMBlhRuvnlSw_pb_x960_iz5h6p.png")
 terra_a_terra = Wine.create(
   name: "Terra a Terra Reserva",
   year: 2016,
   country: "Portugal",
   region: "Douro",
   producer: "Quanta Terra",
-  type: 'White',
+  color: 'White',
   grapes: 'Gouveio, Rabigato, Viosinho'
 )
+terra_a_terra.photo.attach(io: terra_a_terra_photo, filename: "terra_a_terra-wine", content_type: "image/png")
+terra_a_terra.save
 
 puts "wine created"
 
+foz_do_arouce_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678375715/pocket_sommelier/pmcT-2mOQGe_o87XRVoO3A_pb_x960_mna796.png")
 foz_do_arouce = Wine.create(
   name: "Quinta de Foz de Arouce",
   year: 2017,
   country: "Portugal",
   region: "Beiras",
   producer: "Quinta de Foz de Arouce",
-  type: 'Red',
+  color: 'Red',
   grapes: 'Touriga Nacional, Baga'
 )
+foz_do_arouce.photo.attach(io: foz_do_arouce_photo, filename: "foz_do_arouce-wine", content_type: "image/png")
+foz_do_arouce.save
 
 puts "wine created"
 
+carm_branco_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678377058/pocket_sommelier/0CkUT7fBSTOT1YXIQS3aMA_pb_x960_lytnac.png")
 carm_branco = Wine.create(
   name: "CARM",
   year: 2021,
   country: "Portugal",
   region: "Douro",
   producer: "CARM",
-  type: 'White',
+  color: 'White',
   grapes: 'Rabigato, Viosinho'
 )
+carm_branco.photo.attach(io: carm_branco_photo, filename: "carm_branco-wine", content_type: "image/png")
+carm_branco.save
 
 puts "wine created"
 
+oenologo_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678377141/pocket_sommelier/lwInE2QnS4K7Aq4NDH_ixA_pb_x960_nvvqqq.png")
 oenologo = Wine.create(
   name: "O Oenólogo",
   year: 2020,
   country: "Portugal",
   region: "Dão",
   producer: "Casa da Passarella",
-  type: 'White',
+  color: 'White',
   grapes: 'Encruzado'
 )
+oenologo.photo.attach(io: oenologo_photo, filename: "oenologo-wine", content_type: "image/png")
+oenologo.save
 
 puts "wine created"
 
+rosario_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678377425/pocket_sommelier/MYGNWrnVSne1oI8wph_v7g_pb_x960_p3ptif.png")
 rosario = Wine.create(
-  name: "Rosário",
+  name: "Rosário Syrah",
   year: 2021,
   country: "Portugal",
   region: "Península de Setúbal",
   producer: "Casa Ermelinda Freitas",
-  type: 'Red',
+  color: 'Red',
   grapes: 'Syrah'
 )
+rosario.photo.attach(io: rosario_photo, filename: "rosario-wine", content_type: "image/png")
+rosario.save
 
 puts "wine created"
 
+ermelinda_white_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678377578/pocket_sommelier/aGnXbKxSSzKvbpRJRkJb9Q_pb_x960_1_vnevee.png")
 ermelinda_white = Wine.create(
-  name: "Dona Ermelinda",
+  name: "Dona Ermelinda Palmela",
   year: 2021,
   country: "Portugal",
   region: "Península de Setúbal",
   producer: "Casa Ermelinda Freitas",
-  type: 'White',
+  color: 'White',
   grapes: 'Arinto, Viosinho'
 )
+ermelinda_white.photo.attach(io: ermelinda_white_photo, filename: "ermelinda_white-wine", content_type: "image/png")
+ermelinda_white.save
 
 puts "wine created"
 
+ermelinda_sauvignon_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678377643/pocket_sommelier/qPiweASPTOSXlANGvjKoLA_pb_x960_gx2acn.png")
 ermelinda_sauvignon = Wine.create(
   name: "Ermelinda Sauvignon Blanc",
   year: 2019,
   country: "Portugal",
   region: "Península de Setúbal",
   producer: "Casa Ermelinda Freitas",
-  type: 'White',
+  color: 'White',
   grapes: 'Sauvignon Blanc'
 )
+ermelinda_sauvignon.photo.attach(io: ermelinda_sauvignon_photo, filename: "ermelinda_sauvignon-wine", content_type: "image/png")
+ermelinda_sauvignon.save
 
 puts "wine created"
 
-kopke_rose = Wine.create(
+kopke_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678377890/pocket_sommelier/u5dJ4bBwSaKMpYB7TkCdHw_pb_x960_cfvnh9.png")
+kopke = Wine.create(
   name: "Winemaker's Collection Tinta Cão",
   year: 2020,
   country: "Portugal",
   region: "Douro",
   producer: "Kopke",
-  type: 'Rosé',
+  color: 'Rosé',
   grapes: 'Tinta Cão'
 )
+kopke.photo.attach(io: kopke_photo, filename: "kopke-wine", content_type: "image/png")
+kopke.save
 
 puts "wine created"
+
+barranco_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678377982/pocket_sommelier/75qxmRNfQF2aRJLIc6gT-w_pb_x960_qfldfw.png")
+barranco = Wine.create(
+  name: "Barranco Longo Rosé",
+  year: 2021,
+  country: "Portugal",
+  region: "Algarve",
+  producer: "Barranco Longo",
+  color: 'Rosé',
+  grapes: 'Touriga Nacional, Aragonez'
+)
+barranco.photo.attach(io: barranco_photo, filename: "barranco-wine", content_type: "image/png")
+barranco.save
+
+puts "wine created"
+
+dez_tostoes_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678378066/pocket_sommelier/huTbAQTXQhyTEze1PC_yBQ_pb_x960_yeiegf.png")
+dez_tostoes = Wine.create(
+  name: "Dez Tostões",
+  year: 2020,
+  country: "Portugal",
+  region: "Alentejo",
+  producer: "Herdade da Maroteira",
+  color: 'Rosé',
+  grapes: 'Syrah'
+)
+dez_tostoes.photo.attach(io: dez_tostoes_photo, filename: "dez_tostoes-wine", content_type: "image/png")
+dez_tostoes.save
+
+puts "wine created"
+
+aveleda_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678378228/pocket_sommelier/qAxaSbvnQUy_hih_-0c6yQ_pb_x960_ns7vje.png")
+aveleda = Wine.create(
+  name: "Aveleda",
+  year: 2022,
+  country: "Portugal",
+  region: "Vinho Verde",
+  producer: "Aveleda",
+  color: 'White',
+  grapes: 'Loureiro, Alvarinho'
+)
+aveleda.photo.attach(io: aveleda_photo, filename: "aveleda-wine", content_type: "image/png")
+aveleda.save
+
+puts "wine created"
+
+
+#||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+#||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+#||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
 
 #RECIPES
 

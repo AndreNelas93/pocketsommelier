@@ -3,5 +3,5 @@ class Wine < ApplicationRecord
   has_many :tags, through: :wine_tags
   has_many :pairings, dependent: :destroy
 
-  has_many_attached :photos
+  has_one_attached :photo
 end
