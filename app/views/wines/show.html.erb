@@ -1,3 +1,6 @@
+<%= link_to wines_path do %>
+  <%= icon('fa-solid', 'arrow-left', class: "back-arrow")%>
+<% end %>
 <h2><%= @wine.name %></h2>
       <p><strong>Year:</strong> <%= @wine.year %></p>
       <p><strong>Country:</strong> <%= @wine.country %></p>
