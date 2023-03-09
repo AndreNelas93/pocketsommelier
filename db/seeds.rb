@@ -19,7 +19,9 @@ titan = Wine.create(
   year: 2017,
   country: "Portugal",
   region: "Douro",
-  producer: "Titan of Douro"
+  producer: "Titan of Douro",
+  type: 'Red',
+  grapes: 'Touriga Nacional, Touriga Franca, Tinta Roriz'
 )
 
 puts "wine created"
@@ -29,7 +31,9 @@ planalto = Wine.create(
   year: 2020,
   country: "Portugal",
   region: "Douro",
-  producer: "Casa Ferreirinha"
+  producer: "Casa Ferreirinha",
+  type: 'White',
+  grapes: 'Viosinho, Malvasia Fina, Gouveio'
 )
 
 puts "wine created"
@@ -39,7 +43,9 @@ cartuxa = Wine.create(
   year: 2017,
   country: "Portugal",
   region: "Alentejo",
-  producer: "Cartuxa"
+  producer: "Cartuxa",
+  type: 'Red',
+  grapes: 'Alicante Bouschet, Aragonez, Trincadeira'
 )
 
 puts "wine created"
@@ -49,7 +55,9 @@ deu_la_deu = Wine.create(
   year: 2021,
   country: "Portugal",
   region: "Vinho Verde",
-  producer: "Adega de Monção"
+  producer: "Adega de Monção",
+  type: 'White',
+  grapes: 'Alvarinho'
 )
 
 puts "wine created"
@@ -59,7 +67,129 @@ marialva = Wine.create(
   year: 2011,
   country: "Portugal",
   region: "Bairrada",
-  producer: "Adega Cooperativa de Cantanhede"
+  producer: "Adega Cooperativa de Cantanhede",
+  type: 'Red',
+  grapes: 'Baga, Touriga Nacional'
+)
+
+puts "wine created"
+
+pacheca_superior = Wine.create(
+  name: "Pacheca Douro Superior",
+  year: 2019,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Pacheca",
+  type: 'Red',
+  grapes: 'Touriga Nacional, Touriga Franca, Tinta Roriz, Tinta Barroca'
+)
+
+puts "wine created"
+
+sossego = Wine.create(
+  name: "Sossego",
+  year: 2020,
+  country: "Portugal",
+  region: "Alentejo",
+  producer: "Herdade do Peso",
+  type: 'Red',
+  grapes: 'Touriga Nacional, Touriga Franca, Tinta Roriz, Tinta Barroca'
+)
+
+puts "wine created"
+
+terra_a_terra = Wine.create(
+  name: "Terra a Terra Reserva",
+  year: 2016,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Quanta Terra",
+  type: 'White',
+  grapes: 'Gouveio, Rabigato, Viosinho'
+)
+
+puts "wine created"
+
+foz_do_arouce = Wine.create(
+  name: "Quinta de Foz de Arouce",
+  year: 2017,
+  country: "Portugal",
+  region: "Beiras",
+  producer: "Quinta de Foz de Arouce",
+  type: 'Red',
+  grapes: 'Touriga Nacional, Baga'
+)
+
+puts "wine created"
+
+carm_branco = Wine.create(
+  name: "CARM",
+  year: 2021,
+  country: "Portugal",
+  region: "Douro",
+  producer: "CARM",
+  type: 'White',
+  grapes: 'Rabigato, Viosinho'
+)
+
+puts "wine created"
+
+oenologo = Wine.create(
+  name: "O Oenólogo",
+  year: 2020,
+  country: "Portugal",
+  region: "Dão",
+  producer: "Casa da Passarella",
+  type: 'White',
+  grapes: 'Encruzado'
+)
+
+puts "wine created"
+
+rosario = Wine.create(
+  name: "Rosário",
+  year: 2021,
+  country: "Portugal",
+  region: "Península de Setúbal",
+  producer: "Casa Ermelinda Freitas",
+  type: 'Red',
+  grapes: 'Syrah'
+)
+
+puts "wine created"
+
+ermelinda_white = Wine.create(
+  name: "Dona Ermelinda",
+  year: 2021,
+  country: "Portugal",
+  region: "Península de Setúbal",
+  producer: "Casa Ermelinda Freitas",
+  type: 'White',
+  grapes: 'Arinto, Viosinho'
+)
+
+puts "wine created"
+
+ermelinda_sauvignon = Wine.create(
+  name: "Ermelinda Sauvignon Blanc",
+  year: 2019,
+  country: "Portugal",
+  region: "Península de Setúbal",
+  producer: "Casa Ermelinda Freitas",
+  type: 'White',
+  grapes: 'Sauvignon Blanc'
+)
+
+puts "wine created"
+
+kopke_rose = Wine.create(
+  name: "Winemaker's Collection Tinta Cão",
+  year: 2020,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Kopke",
+  type: 'Rosé',
+  grapes: 'Tinta Cão'
 )
 
 puts "wine created"
@@ -200,7 +330,7 @@ pairing5 = Pairing.create(
 )
 
 
-#TAGSrails 
+#TAGSrails
 beef = Tag.create(name: "beef")
 wine_tag_1 = WineTag.create(wine: titan, tag: beef)
 wine_tag_2 = WineTag.create(wine: cartuxa, tag: beef)
