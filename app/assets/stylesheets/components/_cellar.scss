@@ -1,0 +1,34 @@
+.cellar-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin: 5%;
+  grid-gap: 15px;
+  justify-content: center;
+}
+
+.card-cellar {
+  overflow-y: hidden;
+  width: 170px;
+  height: 254px;
+  background: white;
+  box-shadow: 2px 2px 4px, rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  img {
+      height: 180px;
+      width: 100%;
+      object-fit: contain;
+      border-radius: 20px 20px 0 0;
+      padding-top: 15px;
+    }
+  p {
+    line-height: 17px;
+  }
+  .wine-infos {
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+  }
+}

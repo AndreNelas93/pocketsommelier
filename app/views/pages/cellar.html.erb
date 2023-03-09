@@ -9,3 +9,18 @@
       <h3><%= wine.country %></h3>
     </div>
   <% end %>
+
+
+<div class="container-margin">
+  <div class="cellar-grid">
+    <% @wines.each do |wine| %>
+    <div class="card-cellar">
+      <%= image_tag "planalto.png" %>
+      <div class="wine-infos">
+        <p><%= wine.name %><p>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+</div>
