@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_09_115800) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_09_160610) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -46,8 +46,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_115800) do
     t.bigint "user_id", null: false
     t.bigint "recipe_id", null: false
     t.bigint "wine_id", null: false
-    t.boolean "favorite"
-    t.boolean "done"
+    t.boolean "favorite", default: false
+    t.boolean "done", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["recipe_id"], name: "index_pairings_on_recipe_id"
@@ -109,6 +109,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_115800) do
     t.string "producer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "color"
+    t.string "grapes"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
