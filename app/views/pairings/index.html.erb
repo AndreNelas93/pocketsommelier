@@ -1,9 +1,13 @@
 <h1> My Pairings </h1>
 
 <% @pairings.each do |pairing| %>
-    <div style="background: gray; padding: 12px; margin-bottom: 12px">
-      <h3><%= pairing.wine.name %></h3>
-      <h3><%= pairing.recipe.title %></h3>
-      <%= link_to "Delete", pairing_path(pairing), data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to delete this pairing?' } %>
+  <%= link_to pairing_path(pairing) do %>
+    <div class="card" style="margin-bottom: 12px;">
+      <div class="card-body" style="background: gray; padding: 12px;">
+        <h3><%= pairing.wine.name %></h3>
+        <h3><%= pairing.recipe.title %></h3>
+        <%= link_to "Delete", pairing_path(pairing), data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to delete this pairing?' } %>
+      </div>
     </div>
   <% end %>
+<% end %>
