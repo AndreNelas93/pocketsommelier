@@ -2,7 +2,7 @@
   <% if user_signed_in? %>
   <div class="icons-container">
     <%= link_to root_path do %>
-      <%= icon('fa-solid', 'house', class: ("active-icon" if controller_name == "pages"))%>
+      <%= icon('fa-solid', 'house', class: ("active-icon" if controller_name == "pages" && (action_name == "pair_recipe") || (action_name == "pair_wine") || (action_name == "home")))%>
     <% end %>
     <%= link_to cellar_path do %>
       <%= icon('fa-solid', 'wine-bottle', class: ("active-icon" if action_name == "cellar" && controller_name == "pages"))%>

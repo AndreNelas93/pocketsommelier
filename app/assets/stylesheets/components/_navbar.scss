@@ -29,3 +29,18 @@
   align-items: center;
   min-width: 100%;
 }
+
+.profile-icons {
+  color: $buttons;
+  font-size: 14px;
+}
+
+.profile-icons:hover {
+  color: $selected-icons;
+  transition: .2s;
+}
+
+.icon-margin {
+  margin-left: 20%;
+  margin-right: 20%;
+}
