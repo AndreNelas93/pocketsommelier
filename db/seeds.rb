@@ -294,14 +294,18 @@ puts "wine created"
 
 #RECIPES
 
+beef_wellington_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678379161/pocket_sommelier/make-a-classic-beef-wellington-easy-435726-hero-03-1210c31e884044bcb9c1d1475ca818c3_myzud0.jpg")
 beef_wellington = Recipe.create(
   title: "Beef Wellington",
   ingredients: "Beef, Mushrooms, Cured Ham, Puff Pastry, Sauce",
   instructions: "Cook very well and put to the hoven. Very nice!"
 )
+beef_wellington.photo.attach(io: beef_wellington_photo, filename: "beef_wellington-recipe", content_type: "image/png")
+beef_wellington.save
 
 puts "recipe created"
 
+kfc_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678379240/pocket_sommelier/Facetune_06-10-2020-15-37-58-scaled_kyc5js.jpg")
 kfc = Recipe.create(
   title: "Kentucky Fried Chicken",
   ingredients: "Chicken, Flour, Eggs, Oil, Salt, Pepper, Garlic, Paprika",
@@ -318,9 +322,12 @@ kfc = Recipe.create(
   Let chicken drain on a few paper towels when it comes out of the fryer.
   Serve hot."
 )
+kfc.photo.attach(io: kfc_photo, filename: "kfc-recipe", content_type: "image/png")
+kfc.save
 
 puts "recipe created"
 
+fideua_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678379354/pocket_sommelier/Fideua_-_xurde_ehuaqg.jpg")
 fideua = Recipe.create(
   title: "Seafood fideuà",
   ingredients: "Shrimp, Mussels, Rice, Oil, Salt, Pepper, Garlic, Paprika",
@@ -350,9 +357,12 @@ fideua = Recipe.create(
   Allow to sit for 2-3 mins, then squeeze over the lemon juice and arrange the wedges on top.
   Scatter with parsley before serving."
 )
+fideua.photo.attach(io: fideua_photo, filename: "fideua-recipe", content_type: "image/png")
+fideua.save
 
 puts "recipe created"
 
+tonkatsu_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678379478/pocket_sommelier/mikaelcarreira-carolinacarvalho_gb9dmg.jpg")
 tonkatsu = Recipe.create(
   title: "Tonkatsu pork",
   ingredients: "Pork, Salt, Pepper, Cured Ham, Rice, Teriyaki Sauce",
@@ -367,9 +377,12 @@ tonkatsu = Recipe.create(
   STEP 4 While the pork is resting, make the sauce by whisking the ingredients together, adding a splash of water if it is particularly thick.
   Slice the tonkatsu and serve drizzled with the sauce."
 )
+tonkatsu.photo.attach(io: tonkatsu_photo, filename: "tonkatsu-recipe", content_type: "image/png")
+tonkatsu.save
 
 puts "recipe created"
 
+caldeirada_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678379561/pocket_sommelier/transferir_lak77i.jpg")
 caldeirada = Recipe.create(
   title: "Portuguese fish stew (Caldeirada de peixe)",
   ingredients: "Onion, Garlic, Pepper, Bay Leaf, Cod",
@@ -384,6 +397,88 @@ caldeirada = Recipe.create(
   Toast the bread, rub lightly with the halved garlic clove and drizzle with olive oil.
   Serve the stew scatted with chopped coriander leaves, and the toasts for dunking."
 )
+caldeirada.photo.attach(io: caldeirada_photo, filename: "caldeirada-recipe", content_type: "image/png")
+caldeirada.save
+
+puts "recipe created"
+
+sushi_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678382086/pocket_sommelier/JRN.RE.30245_acnlkn.jpg")
+sushi = Recipe.create(
+  title: "Sushi",
+  ingredients: "Salmon, Tuna, Mackarel, Rice, Rice Vinegar, Seaweed, Fruit",
+  instructions: "Place the seaweed on a bamboo mat, then cover the sheet of seaweed with an even layer of prepared sushi rice. Smooth gently with a rice paddle.
+  Layer salmon, cream cheese, and avocado on the rice, and roll it up tightly. Slice with a sharp knife, and enjoy right away with soy sauce."
+)
+sushi.photo.attach(io: sushi_photo, filename: "sushi-recipe", content_type: "image/png")
+sushi.save
+
+puts "recipe created"
+
+cheese_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678382427/pocket_sommelier/20200901_CONDE_189-rt-b_3x2_mzrlqp.webp")
+cheese = Recipe.create(
+  title: "Cheese Board",
+  ingredients: "Your favorite types of cheese",
+  instructions: "There is no right or wrong. Just go with your favourite cheese types. Mix with some toasts and a nice jam."
+)
+cheese.photo.attach(io: cheese_photo, filename: "cheese-recipe", content_type: "image/png")
+cheese.save
+
+puts "recipe created"
+
+pizza_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678382716/pocket_sommelier/La-Braciera_Pizza-Italiana_Neuton-Araujo_jkvvmo.webp")
+pizza = Recipe.create(
+  title: "Pizza",
+  ingredients: "Pizza Dough, Tomato Sauce, Mozzarella, Toppings of your choice",
+  instructions: "Heat the oven to 240C/220C fan/gas 8. Put another baking sheet or an upturned baking tray in the oven on the top shelf. Smooth sauce over bases with the back of a spoon. Scatter with cheese and tomatoes, drizzle with olive oil and season. Put one pizza, still on its baking sheet, on top of the preheated sheet or tray. Bake for 8-10 mins until crisp. Serve with a little more olive oil, and basil leaves if using. Repeat step for remaining pizza."
+)
+pizza.photo.attach(io: pizza_photo, filename: "pizza-recipe", content_type: "image/png")
+pizza.save
+
+puts "recipe created"
+
+lasagna_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678383428/pocket_sommelier/Lasagna-FEATURE_frzhca.jpg")
+lasagna = Recipe.create(
+  title: "Lasagna",
+  instructions: "STEP 1
+  First, make the béchamel sauce. Put the milk, onion, bay leaves and cloves into a large saucepan and bring very gently just up to the boil. Turn off the heat and set aside for 1 hr to infuse.
+
+  STEP 2
+  For the meat sauce, put the oil, celery, onion, carrot, garlic and pancetta in another large saucepan. Gently cook together until the veg is soft but not coloured.
+
+  STEP 3
+  Tip in the beef and pork mince, the milk and chopped tomatoes. Using a wooden spoon, stir together and break up and mash the lumps of mince against the sides of the pan. When the mince is mostly broken down, stir in all the herbs, the stock cubes and the red wine, and bring to a simmer. Cover and cook for 1 hr, stirring occasionally to stop the bottom catching.
+
+  STEP 4
+  Uncover and gently simmer for another 30 mins-1 hr until the meat is tender and saucy. Taste and season.
+
+  STEP 5
+  To finish the béchamel sauce, strain the milk through a fine sieve into one or two jugs. Melt the butter in the same pan then, using a wooden spoon, mix in the flour and cook for 2 mins.
+
+  STEP 6
+  Stir in the strained milk, a little at a time – the mix will thicken at first to a doughy paste, but keep going, adding milk gradually to avoid lumps. Bring to a gentle simmer, stirring constantly (if you have lumps, give it a quick whisk). Gently bubble for a few minutes until thickened. Season with salt, pepper and a good grating of nutmeg.
+
+  STEP 7
+  Heat the oven to 180C/160C fan/gas 4. Spread a spoonful of the meat sauce over the base of a roughly 3.5-litre baking dish. Cover with a single layer of dried pasta sheets, snapping them to fit if needed, then top with a quarter of the béchamel. Spoon over a third of the meat sauce and scatter over a little of the parmesan.
+
+  STEP 8
+  Repeat the layers – pasta, béchamel, meat and parmesan – two more times to use all the meat sauce. Add a final layer of pasta, the last of the béchamel and remaining parmesan. Sit the dish on a baking tray to catch spills and bake for 1 hr until bubbling, browned and crisp on top."
+)
+lasagna.photo.attach(io: lasagna_photo, filename: "lasagna-recipe", content_type: "image/png")
+lasagna.save
+
+puts "recipe created"
+
+ameijoas_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678382716/pocket_sommelier/La-Braciera_ameijoas-Italiana_Neuton-Araujo_jkvvmo.webp")
+ameijoas = Recipe.create(
+  title: "500g Ameijoas Branca, 2 garlic cloves, 3tbsp olive oil, Juice of half a lemon, Salt, Black pepper, White wine, Fresh cilantro, Fresh bread",
+  ingredients: "ameijoas Dough, Tomato Sauce, Mozzarella, Toppings of your choice",
+  instructions: "Rinse and wash the clams well. Discarding any opened or broken shells you find. Place them in a food container, then cover them with saltwater or even better – seawater. Let them soak for 2 hours.
+  Remove the clams from the water, rinse them thoroughly. If necessary, scrub them using a clean kitchen brush to remove any dirt or impurities.
+  Thinly slice the garlic. Place a frying pan (one which has a lid) over low to medium heat. Once hot, add the olive oil. Cook the garlic for around 2 minutes until fragrant.
+  Add in the clams, and a splash of white wine. Cover with the lid, let them cook for around 3 minutes, until the shells open. Discard any shells that remain closed. Season with lemon, salt, black pepper, and fresh cilantro. Serve it with a good crusty bread."
+)
+ameijoas.photo.attach(io: ameijoas_photo, filename: "ameijoas-recipe", content_type: "image/png")
+ameijoas.save
 
 puts "recipe created"
 
@@ -430,36 +525,113 @@ pairing5 = Pairing.create(
 
 #TAGSrails
 beef = Tag.create(name: "beef")
-wine_tag_1 = WineTag.create(wine: titan, tag: beef)
-wine_tag_2 = WineTag.create(wine: cartuxa, tag: beef)
-wine_tag_3 = WineTag.create(wine: marialva, tag: beef)
-recipe_tag_1 = RecipeTag.create(recipe: beef_wellington, tag: beef)
-
-
 pork = Tag.create(name: "pork")
-wine_tag_4 = WineTag.create(wine: titan, tag: pork)
-wine_tag_5 = WineTag.create(wine: cartuxa, tag: pork)
-wine_tag_6 = WineTag.create(wine: marialva, tag: pork)
-recipe_tag_2 = RecipeTag.create(recipe: tonkatsu, tag: pork)
-
-
 chicken = Tag.create(name: "chicken")
-
-wine_tag_7 = WineTag.create(wine: planalto, tag: chicken)
-wine_tag_8 = WineTag.create(wine: marialva, tag: chicken)
-recipe_tag_3 = RecipeTag.create(recipe: kfc, tag: chicken)
-
-
 pasta = Tag.create(name: "pasta")
-
-
+pizza = Tag.create(name: "pizza")
 seafood = Tag.create(name: "sea food")
-wine_tag_9 = WineTag.create(wine: planalto, tag: seafood)
-wine_tag_10 = WineTag.create(wine: deu_la_deu, tag: seafood)
-recipe_tag_4 = RecipeTag.create(recipe: fideua, tag: seafood)
-
-
 fish = Tag.create(name: "fish")
-wine_tag_11 = WineTag.create(wine: planalto, tag: fish)
-wine_tag_12 = WineTag.create(wine: deu_la_deu, tag: fish)
+cheese = Tag.create(name: "cheese")
+sushi = Tag.create(name: "sushi")
+
+#Titan wine tags:
+[beef, pork, pizza, cheese, pasta].each do |tag|
+  WineTag.create(wine: titan, tag: tag)
+end
+
+# Cartuxa wine tags:
+[beef, pork, cheese, pizza].each do |tag|
+  WineTag.create(wine: cartuxa, tag: tag)
+end
+
+# Marialva wine tags:
+[beef, pork, pasta, pizza].each do |tag|
+  WineTag.create(wine: marialva, tag: tag)
+end
+
+# Planalto wine tags:
+[fish, seafood, chicken, sushi].each do |tag|
+  WineTag.create(wine: planalto, tag: tag)
+end
+
+# Deu La Deu wine tags:
+[fish, seafood, sushi].each do |tag|
+  WineTag.create(wine: deu_la_deu, tag: tag)
+end
+
+# Pacheca wine tags:
+[beef, pork, chicken, pasta, cheese, pizza].each do |tag|
+  WineTag.create(wine: pacheca, tag: tag)
+end
+
+# Sossego wine tags:
+[beef, pork, chicken, pasta, cheese, pizza].each do |tag|
+  WineTag.create(wine: sossego, tag: tag)
+end
+
+# Terra a Terra wine tags:
+[chicken, fish, seafood, pasta, sushi].each do |tag|
+  WineTag.create(wine: terra_a_terra, tag: tag)
+end
+
+# Foz do Arouce wine tags:
+[beef, pork, pasta, cheese].each do |tag|
+  WineTag.create(wine: foz_do_arouce, tag: tag)
+end
+
+# Carm Branco wine tags:
+[fish, seafood, sushi].each do |tag|
+  WineTag.create(wine: carm_branco, tag: tag)
+end
+
+# O Oenológo wine tags:
+[fish, seafood, sushi].each do |tag|
+  WineTag.create(wine: oenologo, tag: tag)
+end
+
+# Rosário wine tags:
+[beef, pork, pasta, cheese].each do |tag|
+  WineTag.create(wine: rosario, tag: tag)
+end
+
+# Ermelinda White wine tags:
+[fish, seafood, chicken, pasta, pizza].each do |tag|
+  WineTag.create(wine: ermelinda_white, tag: tag)
+end
+
+# Ermelinda Sauvignon wine tags:
+[fish, seafood, sushi].each do |tag|
+  WineTag.create(wine: ermelinda_sauvignon, tag: tag)
+end
+
+# Kopke Rosé wine tags:
+[fish, seafood, cheese, pasta, sushi].each do |tag|
+  WineTag.create(wine: kopke, tag: tag)
+end
+
+# Barranco Longo wine tags:
+[fish, seafood, pasta, pizza].each do |tag|
+  WineTag.create(wine: barranco, tag: tag)
+end
+
+# Dez Tostões Rosé wine tags:
+[fish, seafood, pasta, chicken, pizza].each do |tag|
+  WineTag.create(wine: dez_tostoes, tag: tag)
+end
+
+# Aveleda wine tags:
+[fish, seafood, sushi].each do |tag|
+  WineTag.create(wine: aveleda, tag: tag)
+end
+
+recipe_tag_1 = RecipeTag.create(recipe: beef_wellington, tag: beef)
+recipe_tag_2 = RecipeTag.create(recipe: tonkatsu, tag: pork)
+recipe_tag_3 = RecipeTag.create(recipe: kfc, tag: chicken)
+recipe_tag_4 = RecipeTag.create(recipe: fideua, tag: seafood)
 recipe_tag_5 = RecipeTag.create(recipe: caldeirada, tag: fish)
+recipe_tag_6 = RecipeTag.create(recipe: sushi, tag: sushi)
+recipe_tag_7 = RecipeTag.create(recipe: sushi, tag: fish)
+recipe_tag_8 = RecipeTag.create(recipe: cheese, tag: cheese)
+recipe_tag_9 = RecipeTag.create(recipe: pizza, tag: pizza)
+recipe_tag_10 = RecipeTag.create(recipe: lasagna, tag: pasta)
+recipe_tag_11 = RecipeTag.create(recipe: ameijoas, tag: seafood)
