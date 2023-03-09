@@ -7,4 +7,5 @@ class User < ApplicationRecord
 
   has_many :pairings, dependent: :destroy
   has_many :wines, through: :pairings
+  has_one_attached :photo
 end
