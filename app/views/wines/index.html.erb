@@ -1,19 +1,29 @@
-<h1>THESE ARE THE WINES</h1>
+<div class="container-margin">
+  <div class="container d-flex justify-content-center w-75 text-left my-5">
+    <h1>Pairings for <%= @recipe.title %></h1>
+  </div>
 
-<% @tags.each do |tag| %>
-  <% tag.wines.each do |wine| %>
-    <div style="background: gray; padding: 12px">
-      <h3><%= link_to wine.name, wine_path(wine, recipe_id: @recipe) %></h3>
-      <%= form_with url: add_to_wishlist_pairings_path, method: "POST", data: { turbo: false } do |f| %>
-        <%= f.hidden_field :wine_id, as: :hidden, value: wine.id %>
-        <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
-        <%= f.button "Add to Wishlist" %>
-      <% end %>
-      <%= form_with url: add_to_done_pairings_path, method: "POST", data: { turbo: false } do |f| %>
-        <%= f.hidden_field :wine_id, as: :hidden, value: wine.id %>
-        <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
-        <%= f.button "Pair" %>
-      <% end %>
-    </div>
+  <% @tags.each do |tag| %>
+    <% tag.wines.each do |wine| %>
+      <div class="card-trip">
+        <%= image_tag "planalto.png" %>
+        <div class="card-trip-infos">
+          <h2><%= link_to wine.name, wine_path(wine, recipe_id: @recipe) %></h2>
+        </div>
+        <div class="button-container">
+          <%= form_with url: add_to_wishlist_pairings_path, method: "POST", data: { turbo: false } do |f| %>
+            <%= f.hidden_field :wine_id, as: :hidden, value: wine.id %>
+            <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
+            <%= f.button "A", class:"round-button" %>
+          <% end %>
+          <%= form_with url: add_to_done_pairings_path, method: "POST", data: { turbo: false } do |f| %>
+            <%= f.hidden_field :wine_id, as: :hidden, value: wine.id %>
+            <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
+            <%= f.button "P", class:"round-button" %>
+          <% end %>
+        </div>
+      </div>
+      <hr>
+    <% end %>
   <% end %>
-<% end %>
+</div>

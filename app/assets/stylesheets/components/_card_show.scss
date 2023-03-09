@@ -1,0 +1,44 @@
+.card-trip {
+  overflow: hidden;
+  background: $background;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-bottom: 50px;
+}
+
+.card-trip > img {
+  height: 400px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.card-trip h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: $fontcolor;
+}
+
+.card-trip a {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: $fontcolor;
+  text-decoration: none;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-trip-infos .card-trip-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
