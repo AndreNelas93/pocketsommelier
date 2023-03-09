@@ -1,0 +1,37 @@
+.container-wine {
+  display: flex;
+  justify-content: center;
+  background-color: chocolate;
+  height: 500px;
+  margin-bottom: 20px;
+  margin-left: 3%;
+  margin-right: 3%;
+  border-radius: 5px;
+}
+
+
+.card-body {
+  padding: 10px;
+
+}
+
+.card-title {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.card-text {
+  font-size: 16px;
+}
+
+.wine_card_title{
+  font-size: 500px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
