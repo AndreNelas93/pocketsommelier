@@ -41,6 +41,12 @@ class PairingsController < ApplicationController
     @pairing.update(pairing_params)
   end
 
+  def destroy
+    @pairing = Pairing.find(params[:id])
+    @pairing.destroy
+    redirect_to pairings_path
+  end
+
   private
 
   def pairing_params
