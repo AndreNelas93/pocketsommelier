@@ -7,12 +7,12 @@
   <div class="container-pair-h1">
     <h1>Pair Recipe</h1>
   </div>
-    <%= form_with url: wines_path, method: :get, data: { turbo: false } do |f| %>
+  <%= form_with url: wines_path, method: :get, data: { turbo: false } do |f| %>
     <div class="d-flex justify-content-center">
       <%= f.collection_select(:recipe, @recipes, :title, :title, :prompt => "Select your recipe") %>
     </div>
-</div>
-  <div class="d-flex justify-content-center">
-     <%= f.submit "Pair", class:"btn-large btn-position" %>
-  </div>
+    <div class="d-flex justify-content-center">
+      <%= f.submit "Pair", class:"btn-large btn-position" %>
+    </div>
   <% end %>
+</div>
