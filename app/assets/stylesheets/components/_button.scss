@@ -2,6 +2,38 @@
   font-family: 'Source Sans Pro';
   font-weight: 400;
   font-size: 18px;
+  background-color: $selected-icons;
+  color: white;
+  border-color: $fontcolor;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  padding-left: 5px;
+  padding-right: 5px;
+  min-width: 90px;
+  max-width: 180px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn-position {
+  bottom: 170px;
+  position: fixed;
+}
+
+.btn-large:hover {
+  color: $selected-icons;
+  border-color: $selected-icons;
+  background-color: $buttons;
+}
+
+.btn-large-secondary {
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  font-size: 18px;
   background-color: $buttons;
   color: $fontcolor;
   border-color: $fontcolor;
@@ -16,11 +48,9 @@
   padding-right: 5px;
   min-width: 90px;
   max-width: 180px;
-  bottom: 160px;
-  position: fixed;
 }
 
-.btn-large:hover {
+.btn-large-secondary:hover {
   color: white;
   border-color: $selected-icons;
   background-color: $selected-icons;
