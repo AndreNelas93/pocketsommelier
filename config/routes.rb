@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :recipes, only: [:index, :show]
   resources :wines, only: [:index, :show]
 
-  resources :pairings, only: [:index, :show, :update] do
+  resources :pairings, only: [:index, :show, :update, :destroy] do
     collection do
       post "add_to_wishlist"
       post "add_to_done"
