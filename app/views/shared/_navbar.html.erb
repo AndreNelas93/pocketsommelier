@@ -15,8 +15,10 @@
     <% end %>
   </div>
   <% else %>
-    <%= link_to cellar_path do %>
-      <%= icon('fa-solid', 'wine-bottle', class: ("active-icon" if action_name == "cellar" && controller_name == "pages"))%>
+    <% unless controller_name == "sessions" || controller_name == "registrations"%>
+      <%= link_to "Login", user_session_path, class: "btn-large" %>
+      <% else %>
+        <%= image_tag "logofabio.png", style:"height: 40px;" %>
     <% end %>
   <% end %>
 </div>
