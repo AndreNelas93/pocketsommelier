@@ -526,6 +526,17 @@ lobster.save
 
 puts "recipe created"
 
+picanha_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678447358/pocket_sommelier/0Q8A4730201-e1592672864716_buvxbd.jpg")
+picanha = Recipe.create(
+  title: "Brazilian Picanha",
+  ingredients: "Picanha, Salt",
+  instructions: "Grill the thin sliced picanha, with salt, for a short time, to keep its moist. Serves perfectly with rice and black beans."
+)
+picanha.photo.attach(io: picanha_photo, filename: "picanha-recipe", content_type: "image/png")
+picanha.save
+
+puts "recipe created"
+
 #USERS
 
 user = User.create(
@@ -679,3 +690,7 @@ recipe_tag_8 = RecipeTag.create(recipe: cheese, tag: cheese)
 recipe_tag_9 = RecipeTag.create(recipe: pizza, tag: pizza)
 recipe_tag_10 = RecipeTag.create(recipe: lasagna, tag: pasta)
 recipe_tag_11 = RecipeTag.create(recipe: ameijoas, tag: seafood)
+recipe_tag_12 = RecipeTag.create(recipe: shrimps, tag: seafood)
+recipe_tag_13 = RecipeTag.create(recipe: barnacles, tag: seafood)
+recipe_tag_14 = RecipeTag.create(recipe: lobster, tag: seafood)
+recipe_tag_15 = RecipeTag.create(recipe: picanha, tag: beef)
