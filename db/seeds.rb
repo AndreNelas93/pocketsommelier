@@ -470,8 +470,8 @@ puts "recipe created"
 
 ameijoas_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678388077/pocket_sommelier/ameijoas-a-bulhao-pato_khuern.jpg")
 ameijoas = Recipe.create(
-  title: "500g Ameijoas Branca, 2 garlic cloves, 3tbsp olive oil, Juice of half a lemon, Salt, Black pepper, White wine, Fresh cilantro, Fresh bread",
-  ingredients: "ameijoas Dough, Tomato Sauce, Mozzarella, Toppings of your choice",
+  title: "Portuguese Clams (Ameijoas à Bulhão Pato)",
+  ingredients: "500g Ameijoas Branca, 2 garlic cloves, 3tbsp olive oil, Juice of half a lemon, Salt, Black pepper, White wine, Fresh cilantro, Fresh bread",
   instructions: "Rinse and wash the clams well. Discarding any opened or broken shells you find. Place them in a food container, then cover them with saltwater or even better – seawater. Let them soak for 2 hours.
   Remove the clams from the water, rinse them thoroughly. If necessary, scrub them using a clean kitchen brush to remove any dirt or impurities.
   Thinly slice the garlic. Place a frying pan (one which has a lid) over low to medium heat. Once hot, add the olive oil. Cook the garlic for around 2 minutes until fragrant.
@@ -479,6 +479,50 @@ ameijoas = Recipe.create(
 )
 ameijoas.photo.attach(io: ameijoas_photo, filename: "ameijoas-recipe", content_type: "image/png")
 ameijoas.save
+
+puts "recipe created"
+
+filetes_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678446545/pocket_sommelier/Sour-Cream-Crowned-Fish-Fillets_Large500_ID-1207231_uc3fbb.jpg")
+filetes = Recipe.create(
+  title: "Sour Cream and Onion Fish",
+  ingredients: "1½ cups sour cream, 2 Tbsp. onion powder, 1 lemon, 1 small bunch of chives, ½ cup panko breadcrumbs, 2 Tbsp. olive oil, Four 6 oz. fish fillets (cod, salmon, halibut, or trout), 1 big head of crisp lettuce, Salt and pepper, to taste",
+  instructions: "In this simple weeknight dinner, the fish is the chip. Coat fish fillets with sour cream and panko, then bake until crisp and golden brown. You can make this easy fish recipe with cod, salmon, halibut, or trout."
+)
+filetes.photo.attach(io: filetes_photo, filename: "filetes-recipe", content_type: "image/png")
+filetes.save
+
+puts "recipe created"
+
+shrimps_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678446759/pocket_sommelier/B-000-3222_zkhzgn.jpg")
+shrimps = Recipe.create(
+  title: "Shrimps",
+  ingredients: "Shrimps, Salt",
+  instructions: "Boil the shrimp in salty water for 2 minutes. Take them out and place over ice or cold water."
+)
+shrimps.photo.attach(io: shrimps_photo, filename: "shrimps-recipe", content_type: "image/png")
+shrimps.save
+
+puts "recipe created"
+
+barnacles_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678446916/pocket_sommelier/cozer-percebes_tbps0k.jpg")
+barnacles = Recipe.create(
+  title: "Barnacles",
+  ingredients: "Barnacles, Salt",
+  instructions: "Boil the barnacles in salty water for 2 to 3 minutes. Take them out and place over ice or cold water."
+)
+barnacles.photo.attach(io: barnacles_photo, filename: "barnacles-recipe", content_type: "image/png")
+barnacles.save
+
+puts "recipe created"
+
+lobster_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678447052/pocket_sommelier/boiled-lobster-7-1024x1024_gyu02l.jpg")
+lobster = Recipe.create(
+  title: "Lobster",
+  ingredients: "Lobster, Salt",
+  instructions: "Boil the lobster in salty water for 3 to 5 minutes, depending on the size. Take them out and place over ice or cold water."
+)
+lobster.photo.attach(io: lobster_photo, filename: "lobster-recipe", content_type: "image/png")
+lobster.save
 
 puts "recipe created"
 
