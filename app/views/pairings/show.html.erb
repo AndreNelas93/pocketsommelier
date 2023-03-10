@@ -1,7 +1,24 @@
+<div class="container-margin">
+<h1 class="text-center my-5"> This is your pairing! </h1>
 
-<h1> This is your pairing! </h1>
-
-      <h3><%= @pairing.wine.name %></h3>
-      <h3><%= @pairing.recipe.title %></h3>
+<%= link_to wine_path(@pairing.wine) do %>
+  <div class="card-product-cellar">
+    <%= cl_image_tag @pairing.wine.photo.key %>
+      <div class="card-product-infos">
+      <h3><%= "#{@pairing.wine.name}, #{@pairing.wine.year}" %></h3>
+      <p><%= "#{@pairing.wine.region}, #{@pairing.wine.country}." %></p>
     </div>
+  </div>
+<% end %>
 
+<div class="text-center"> <h1> + </h1></div>
+
+<div class="recipe-card-pairing">
+   <%= cl_image_tag @pairing.recipe.photo.key %>
+  <div class=".recipe-card-pairing-infos">
+      <h2><%= link_to @pairing.recipe.title, recipe_path(@pairing.recipe) %></h2>
+      <p><strong>Ingredients:</strong> <%= @pairing.recipe.ingredients %></p>
+      <p><strong>Instructions:</strong> <%= @pairing.recipe.instructions %></p>
+  </div>
+</div>
+</div>

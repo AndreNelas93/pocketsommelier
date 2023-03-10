@@ -1,0 +1,20 @@
+.bottle {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 100%;
+  img {
+    align-self: center;
+    height: 390px;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  h2 {
+    margin: auto;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
