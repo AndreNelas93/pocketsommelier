@@ -1,26 +1,21 @@
-<h1>Cellar</h1>
-
-<% @wines.each do |wine| %>
-    <div style="background: gray; padding: 12px; margin-bottom: 12px">
-      <h3><%= wine.name %></h3>
-      <h3><%= wine.year %></h3>
-      <h3><%= wine.producer %></h3>
-      <h3><%= wine.region %></h3>
-      <h3><%= wine.country %></h3>
-    </div>
-  <% end %>
-
+<div class="container d-flex justify-content-center mt-3">
+  <%= image_tag "logofabio.png", style:"height: 80px;" %>
+</div>
+<hr>
+<div class="container d-flex justify-content-center mb-3 mt-1">
+  <h1>Cellar</h1>
+</div>
 
 <div class="container-margin">
-  <div class="cellar-grid">
-    <% @wines.each do |wine| %>
-    <div class="card-cellar">
-      <%= image_tag "planalto.png" %>
-      <div class="wine-infos">
-        <p><%= wine.name %><p>
+  <% @wines.each do |wine| %>
+    <%= link_to wine_path(wine) do %>
+      <div class="card-product-cellar">
+        <%= cl_image_tag wine.photo.key %>
+        <div class="card-product-infos">
+          <h3><%= "#{wine.name}, #{wine.year}" %></h3>
+          <p><%= "#{wine.region}, #{wine.country}." %></p>
+        </div>
       </div>
-    </div>
     <% end %>
-  </div>
-
+  <% end %>
 </div>
