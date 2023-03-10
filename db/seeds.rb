@@ -285,6 +285,21 @@ aveleda.save
 
 puts "wine created"
 
+pe_posto_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678462188/pocket_sommelier/V06028-removebg-preview_oazokf.png")
+pe_posto = Wine.create(
+  name: "Pé Posto Grande Reserva",
+  year: 2009,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Quinta de Mosteiro",
+  color: 'Red',
+  grapes: 'Vinhas Velhas'
+)
+pe_posto.photo.attach(io: pe_posto_photo, filename: "pe_posto-wine", content_type: "image/png")
+pe_posto.save
+
+puts "wine created"
+
 
 #||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 #||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
@@ -677,6 +692,11 @@ end
 # Aveleda wine tags:
 [fish, seafood, sushi].each do |tag|
   WineTag.create(wine: aveleda, tag: tag)
+end
+
+# Pé Posto wine tags:
+[beef, pork, pasta, pizza, cheese].each do |tag|
+  WineTag.create(wine: pe_posto, tag: tag)
 end
 
 recipe_tag_1 = RecipeTag.create(recipe: beef_wellington, tag: beef)

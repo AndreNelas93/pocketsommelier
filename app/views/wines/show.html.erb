@@ -1,21 +1,28 @@
-<%= link_to wines_path do %>
+<div class="container-margin">
+<%= link_to :back do %>
   <%= icon('fa-solid', 'arrow-left', class: "back-arrow")%>
 <% end %>
+<div class="bottle">
 <h2><%= @wine.name %></h2>
-      <p><strong>Year:</strong> <%= @wine.year %></p>
-      <p><strong>Country:</strong> <%= @wine.country %></p>
-      <p><strong>Region:</strong> <%= @wine.region %></p>
-      <p><strong>Producer:</strong> <%= @wine.producer %></p>
+<%= cl_image_tag @wine.photo.key %>
+<p><strong>Year:</strong><%= @wine.year %></p>
+<p><strong>Country:</strong> <%= @wine.country %></p>
+<p><strong>Type:</strong> <%= @wine.color %></p>
+<p><strong>Grapes:</strong> <%= @wine.grapes %></p>
+<p><strong>Region:</strong> <%= @wine.region %></p>
+<p><strong>Producer:</strong> <%= @wine.producer %></p>
+</div>
 
-      <%= form_with url: add_to_wishlist_pairings_path, method: "POST", data: { turbo: false } do |f| %>
-        <%= f.hidden_field :wine_id, as: :hidden, value: @wine.id %>
-        <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
-        <%= f.button "Save" %>
-      <% end %>
-      <%= form_with url: add_to_done_pairings_path, method: "POST", data: { turbo: false } do |f| %>
-        <%= f.hidden_field :wine_id, as: :hidden, value: @wine.id %>
-        <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
-        <%= f.button "Pair" %>
-      <% end %>
-
-
+<% if @recipe %>
+  <%= form_with url: add_to_wishlist_pairings_path, method: "POST", data: { turbo: false } do |f| %>
+    <%= f.hidden_field :wine_id, as: :hidden, value: @wine.id %>
+    <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
+    <%= f.button "Save" %>
+  <% end %>
+  <%= form_with url: add_to_done_pairings_path, method: "POST", data: { turbo: false } do |f| %>
+    <%= f.hidden_field :wine_id, as: :hidden, value: @wine.id %>
+    <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
+    <%= f.button "Pair" %>
+  <% end %>
+<% end %>
+</div>

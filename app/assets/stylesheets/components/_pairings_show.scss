@@ -1,0 +1,46 @@
+.recipe-card-pairing {
+  overflow: hidden;
+  background: $background;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-bottom: 50px;
+  box-shadow: 1px, 1px, 1px, black;
+}
+
+.recipe-card-pairing > img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.recipe-card-pairing h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: $fontcolor;
+}
+
+.recipe-card-pairing a {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: $fontcolor;
+  text-decoration: none;
+}
+
+.recipe-card-pairing .recipe-card-pairing-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+.recipe-card-pairing-infos .recipe-card-pairing-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}

@@ -29,7 +29,7 @@ class PairingsController < ApplicationController
     if @pairing.save
       @wine = @pairing.wine
       @tags = @pairing.wine.tags
-      redirect_to recipes_path
+      redirect_to recipes_path(wine: @wine.name)
     else
       render "recipes/index", status: :unprocessable_entity
     end

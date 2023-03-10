@@ -6,7 +6,7 @@
   <% @tags.each do |tag| %>
     <% tag.wines.each do |wine| %>
       <div class="card-trip">
-        <%= image_tag "planalto.png" %>
+        <%= cl_image_tag wine.photo.key %>
         <div class="card-trip-infos">
           <h2><%= link_to wine.name, wine_path(wine, recipe_id: @recipe) %></h2>
         </div>
