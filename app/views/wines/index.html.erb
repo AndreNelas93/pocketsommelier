@@ -11,15 +11,16 @@
           <h2><%= link_to wine.name, wine_path(wine, recipe_id: @recipe) %></h2>
         </div>
         <div class="button-container">
-          <%= form_with url: add_to_wishlist_pairings_path, method: "POST", data: { turbo: false } do |f| %>
+         <%= form_with url: add_to_done_pairings_path, method: "POST", data: { turbo: false } do |f| %>
             <%= f.hidden_field :wine_id, as: :hidden, value: wine.id %>
             <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
-            <%= f.button "A", class:"round-button" %>
+            <%= f.button "Pair", class: "btn-large" %>
+
           <% end %>
-          <%= form_with url: add_to_done_pairings_path, method: "POST", data: { turbo: false } do |f| %>
+         <%= form_with url: add_to_wishlist_pairings_path, method: "POST", data: { turbo: false } do |f| %>
             <%= f.hidden_field :wine_id, as: :hidden, value: wine.id %>
             <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
-            <%= f.button "P", class:"round-button" %>
+              <%= f.button '<i class="fa-regular fa-bookmark"></i>'.html_safe, type: :submit, class: "recipe-add-pairing-btn" %>
           <% end %>
         </div>
       </div>
