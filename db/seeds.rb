@@ -403,36 +403,36 @@ caldeirada.save
 puts "recipe created"
 
 sushi_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678382086/pocket_sommelier/JRN.RE.30245_acnlkn.jpg")
-sushi = Recipe.create(
+sushi_recipe = Recipe.create(
   title: "Sushi",
   ingredients: "Salmon, Tuna, Mackarel, Rice, Rice Vinegar, Seaweed, Fruit",
   instructions: "Place the seaweed on a bamboo mat, then cover the sheet of seaweed with an even layer of prepared sushi rice. Smooth gently with a rice paddle.
   Layer salmon, cream cheese, and avocado on the rice, and roll it up tightly. Slice with a sharp knife, and enjoy right away with soy sauce."
 )
-sushi.photo.attach(io: sushi_photo, filename: "sushi-recipe", content_type: "image/png")
-sushi.save
+sushi_recipe.photo.attach(io: sushi_photo, filename: "sushi-recipe", content_type: "image/png")
+sushi_recipe.save
 
 puts "recipe created"
 
 cheese_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678382427/pocket_sommelier/20200901_CONDE_189-rt-b_3x2_mzrlqp.webp")
-cheese = Recipe.create(
+cheese_board = Recipe.create(
   title: "Cheese Board",
   ingredients: "Your favorite types of cheese",
   instructions: "There is no right or wrong. Just go with your favourite cheese types. Mix with some toasts and a nice jam."
 )
-cheese.photo.attach(io: cheese_photo, filename: "cheese-recipe", content_type: "image/png")
-cheese.save
+cheese_board.photo.attach(io: cheese_photo, filename: "cheese-recipe", content_type: "image/png")
+cheese_board.save
 
 puts "recipe created"
 
 pizza_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678382716/pocket_sommelier/La-Braciera_Pizza-Italiana_Neuton-Araujo_jkvvmo.webp")
-pizza = Recipe.create(
+pizza_recipe = Recipe.create(
   title: "Pizza",
   ingredients: "Pizza Dough, Tomato Sauce, Mozzarella, Toppings of your choice",
   instructions: "Heat the oven to 240C/220C fan/gas 8. Put another baking sheet or an upturned baking tray in the oven on the top shelf. Smooth sauce over bases with the back of a spoon. Scatter with cheese and tomatoes, drizzle with olive oil and season. Put one pizza, still on its baking sheet, on top of the preheated sheet or tray. Bake for 8-10 mins until crisp. Serve with a little more olive oil, and basil leaves if using. Repeat step for remaining pizza."
 )
-pizza.photo.attach(io: pizza_photo, filename: "pizza-recipe", content_type: "image/png")
-pizza.save
+pizza_recipe.photo.attach(io: pizza_photo, filename: "pizza-recipe", content_type: "image/png")
+pizza_recipe.save
 
 puts "recipe created"
 
@@ -684,10 +684,10 @@ recipe_tag_2 = RecipeTag.create(recipe: tonkatsu, tag: pork)
 recipe_tag_3 = RecipeTag.create(recipe: kfc, tag: chicken)
 recipe_tag_4 = RecipeTag.create(recipe: fideua, tag: seafood)
 recipe_tag_5 = RecipeTag.create(recipe: caldeirada, tag: fish)
-recipe_tag_6 = RecipeTag.create(recipe: sushi, tag: sushi)
-recipe_tag_7 = RecipeTag.create(recipe: sushi, tag: fish)
-recipe_tag_8 = RecipeTag.create(recipe: cheese, tag: cheese)
-recipe_tag_9 = RecipeTag.create(recipe: pizza, tag: pizza)
+recipe_tag_6 = RecipeTag.create(recipe: sushi_recipe, tag: sushi)
+recipe_tag_7 = RecipeTag.create(recipe: sushi_recipe, tag: fish)
+recipe_tag_8 = RecipeTag.create(recipe: cheese_board, tag: cheese)
+recipe_tag_9 = RecipeTag.create(recipe: pizza_recipe, tag: pizza)
 recipe_tag_10 = RecipeTag.create(recipe: lasagna, tag: pasta)
 recipe_tag_11 = RecipeTag.create(recipe: ameijoas, tag: seafood)
 recipe_tag_12 = RecipeTag.create(recipe: shrimps, tag: seafood)
