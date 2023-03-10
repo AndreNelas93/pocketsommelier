@@ -1,0 +1,21 @@
+.recipe {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  margin-left: 3%;
+  margin-right: 3%;
+  max-width: 100%;
+img {
+  align-self: center;
+  height: 350px;
+  margin: auto;
+  margin-bottom: 20px;
+  object-fit: cover;
+  max-width: 100%;
+}
+h2 {
+  margin: auto;
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+}

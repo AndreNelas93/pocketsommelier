@@ -3,11 +3,12 @@
     <h1>Pairings for <%= @wine.name %></h1>
   </div>
 
+
   <% @tags.each do |tag| %>
     <% tag.recipes.each do |recipe| %>
       <div class="card-trip">
         <div class="position-relative">
-          <%= image_tag "recipes.jpg", class: "recipe-img" %>
+          <%= cl_image_tag recipe.photo.key, class: "recipe-img" %>
           <%= form_with url: add_to_wishlist_pairings_path, method: "POST", data: { turbo: false }, class: "recipe-add-pairing-form" do |f| %>
             <%= f.hidden_field :wine_id, as: :hidden, value: @wine.id %>
             <%= f.hidden_field :recipe_id, as: :hidden, value: recipe.id %>

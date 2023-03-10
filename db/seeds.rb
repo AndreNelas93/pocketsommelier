@@ -285,6 +285,21 @@ aveleda.save
 
 puts "wine created"
 
+pe_posto_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678462188/pocket_sommelier/V06028-removebg-preview_oazokf.png")
+pe_posto = Wine.create(
+  name: "Pé Posto Grande Reserva",
+  year: 2009,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Quinta de Mosteiro",
+  color: 'Red',
+  grapes: 'Vinhas Velhas'
+)
+pe_posto.photo.attach(io: pe_posto_photo, filename: "pe_posto-wine", content_type: "image/png")
+pe_posto.save
+
+puts "wine created"
+
 
 #||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 #||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
@@ -403,36 +418,36 @@ caldeirada.save
 puts "recipe created"
 
 sushi_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678382086/pocket_sommelier/JRN.RE.30245_acnlkn.jpg")
-sushi = Recipe.create(
+sushi_recipe = Recipe.create(
   title: "Sushi",
   ingredients: "Salmon, Tuna, Mackarel, Rice, Rice Vinegar, Seaweed, Fruit",
   instructions: "Place the seaweed on a bamboo mat, then cover the sheet of seaweed with an even layer of prepared sushi rice. Smooth gently with a rice paddle.
   Layer salmon, cream cheese, and avocado on the rice, and roll it up tightly. Slice with a sharp knife, and enjoy right away with soy sauce."
 )
-sushi.photo.attach(io: sushi_photo, filename: "sushi-recipe", content_type: "image/png")
-sushi.save
+sushi_recipe.photo.attach(io: sushi_photo, filename: "sushi-recipe", content_type: "image/png")
+sushi_recipe.save
 
 puts "recipe created"
 
 cheese_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678382427/pocket_sommelier/20200901_CONDE_189-rt-b_3x2_mzrlqp.webp")
-cheese = Recipe.create(
+cheese_board = Recipe.create(
   title: "Cheese Board",
   ingredients: "Your favorite types of cheese",
   instructions: "There is no right or wrong. Just go with your favourite cheese types. Mix with some toasts and a nice jam."
 )
-cheese.photo.attach(io: cheese_photo, filename: "cheese-recipe", content_type: "image/png")
-cheese.save
+cheese_board.photo.attach(io: cheese_photo, filename: "cheese-recipe", content_type: "image/png")
+cheese_board.save
 
 puts "recipe created"
 
 pizza_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678382716/pocket_sommelier/La-Braciera_Pizza-Italiana_Neuton-Araujo_jkvvmo.webp")
-pizza = Recipe.create(
+pizza_recipe = Recipe.create(
   title: "Pizza",
   ingredients: "Pizza Dough, Tomato Sauce, Mozzarella, Toppings of your choice",
   instructions: "Heat the oven to 240C/220C fan/gas 8. Put another baking sheet or an upturned baking tray in the oven on the top shelf. Smooth sauce over bases with the back of a spoon. Scatter with cheese and tomatoes, drizzle with olive oil and season. Put one pizza, still on its baking sheet, on top of the preheated sheet or tray. Bake for 8-10 mins until crisp. Serve with a little more olive oil, and basil leaves if using. Repeat step for remaining pizza."
 )
-pizza.photo.attach(io: pizza_photo, filename: "pizza-recipe", content_type: "image/png")
-pizza.save
+pizza_recipe.photo.attach(io: pizza_photo, filename: "pizza-recipe", content_type: "image/png")
+pizza_recipe.save
 
 puts "recipe created"
 
@@ -470,8 +485,8 @@ puts "recipe created"
 
 ameijoas_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678388077/pocket_sommelier/ameijoas-a-bulhao-pato_khuern.jpg")
 ameijoas = Recipe.create(
-  title: "500g Ameijoas Branca, 2 garlic cloves, 3tbsp olive oil, Juice of half a lemon, Salt, Black pepper, White wine, Fresh cilantro, Fresh bread",
-  ingredients: "ameijoas Dough, Tomato Sauce, Mozzarella, Toppings of your choice",
+  title: "Portuguese Clams (Ameijoas à Bulhão Pato)",
+  ingredients: "500g Ameijoas Branca, 2 garlic cloves, 3tbsp olive oil, Juice of half a lemon, Salt, Black pepper, White wine, Fresh cilantro, Fresh bread",
   instructions: "Rinse and wash the clams well. Discarding any opened or broken shells you find. Place them in a food container, then cover them with saltwater or even better – seawater. Let them soak for 2 hours.
   Remove the clams from the water, rinse them thoroughly. If necessary, scrub them using a clean kitchen brush to remove any dirt or impurities.
   Thinly slice the garlic. Place a frying pan (one which has a lid) over low to medium heat. Once hot, add the olive oil. Cook the garlic for around 2 minutes until fragrant.
@@ -479,6 +494,61 @@ ameijoas = Recipe.create(
 )
 ameijoas.photo.attach(io: ameijoas_photo, filename: "ameijoas-recipe", content_type: "image/png")
 ameijoas.save
+
+puts "recipe created"
+
+filetes_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678446545/pocket_sommelier/Sour-Cream-Crowned-Fish-Fillets_Large500_ID-1207231_uc3fbb.jpg")
+filetes = Recipe.create(
+  title: "Sour Cream and Onion Fish",
+  ingredients: "1½ cups sour cream, 2 Tbsp. onion powder, 1 lemon, 1 small bunch of chives, ½ cup panko breadcrumbs, 2 Tbsp. olive oil, Four 6 oz. fish fillets (cod, salmon, halibut, or trout), 1 big head of crisp lettuce, Salt and pepper, to taste",
+  instructions: "In this simple weeknight dinner, the fish is the chip. Coat fish fillets with sour cream and panko, then bake until crisp and golden brown. You can make this easy fish recipe with cod, salmon, halibut, or trout."
+)
+filetes.photo.attach(io: filetes_photo, filename: "filetes-recipe", content_type: "image/png")
+filetes.save
+
+puts "recipe created"
+
+shrimps_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678446759/pocket_sommelier/B-000-3222_zkhzgn.jpg")
+shrimps = Recipe.create(
+  title: "Shrimps",
+  ingredients: "Shrimps, Salt",
+  instructions: "Boil the shrimp in salty water for 2 minutes. Take them out and place over ice or cold water."
+)
+shrimps.photo.attach(io: shrimps_photo, filename: "shrimps-recipe", content_type: "image/png")
+shrimps.save
+
+puts "recipe created"
+
+barnacles_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678446916/pocket_sommelier/cozer-percebes_tbps0k.jpg")
+barnacles = Recipe.create(
+  title: "Barnacles",
+  ingredients: "Barnacles, Salt",
+  instructions: "Boil the barnacles in salty water for 2 to 3 minutes. Take them out and place over ice or cold water."
+)
+barnacles.photo.attach(io: barnacles_photo, filename: "barnacles-recipe", content_type: "image/png")
+barnacles.save
+
+puts "recipe created"
+
+lobster_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678447052/pocket_sommelier/boiled-lobster-7-1024x1024_gyu02l.jpg")
+lobster = Recipe.create(
+  title: "Lobster",
+  ingredients: "Lobster, Salt",
+  instructions: "Boil the lobster in salty water for 3 to 5 minutes, depending on the size. Take them out and place over ice or cold water."
+)
+lobster.photo.attach(io: lobster_photo, filename: "lobster-recipe", content_type: "image/png")
+lobster.save
+
+puts "recipe created"
+
+picanha_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678447358/pocket_sommelier/0Q8A4730201-e1592672864716_buvxbd.jpg")
+picanha = Recipe.create(
+  title: "Brazilian Picanha",
+  ingredients: "Picanha, Salt",
+  instructions: "Grill the thin sliced picanha, with salt, for a short time, to keep its moist. Serves perfectly with rice and black beans."
+)
+picanha.photo.attach(io: picanha_photo, filename: "picanha-recipe", content_type: "image/png")
+picanha.save
 
 puts "recipe created"
 
@@ -624,14 +694,23 @@ end
   WineTag.create(wine: aveleda, tag: tag)
 end
 
+# Pé Posto wine tags:
+[beef, pork, pasta, pizza, cheese].each do |tag|
+  WineTag.create(wine: pe_posto, tag: tag)
+end
+
 recipe_tag_1 = RecipeTag.create(recipe: beef_wellington, tag: beef)
 recipe_tag_2 = RecipeTag.create(recipe: tonkatsu, tag: pork)
 recipe_tag_3 = RecipeTag.create(recipe: kfc, tag: chicken)
 recipe_tag_4 = RecipeTag.create(recipe: fideua, tag: seafood)
 recipe_tag_5 = RecipeTag.create(recipe: caldeirada, tag: fish)
-recipe_tag_6 = RecipeTag.create(recipe: sushi, tag: sushi)
-recipe_tag_7 = RecipeTag.create(recipe: sushi, tag: fish)
-recipe_tag_8 = RecipeTag.create(recipe: cheese, tag: cheese)
-recipe_tag_9 = RecipeTag.create(recipe: pizza, tag: pizza)
+recipe_tag_6 = RecipeTag.create(recipe: sushi_recipe, tag: sushi)
+recipe_tag_7 = RecipeTag.create(recipe: sushi_recipe, tag: fish)
+recipe_tag_8 = RecipeTag.create(recipe: cheese_board, tag: cheese)
+recipe_tag_9 = RecipeTag.create(recipe: pizza_recipe, tag: pizza)
 recipe_tag_10 = RecipeTag.create(recipe: lasagna, tag: pasta)
 recipe_tag_11 = RecipeTag.create(recipe: ameijoas, tag: seafood)
+recipe_tag_12 = RecipeTag.create(recipe: shrimps, tag: seafood)
+recipe_tag_13 = RecipeTag.create(recipe: barnacles, tag: seafood)
+recipe_tag_14 = RecipeTag.create(recipe: lobster, tag: seafood)
+recipe_tag_15 = RecipeTag.create(recipe: picanha, tag: beef)
