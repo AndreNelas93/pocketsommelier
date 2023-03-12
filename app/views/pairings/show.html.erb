@@ -11,12 +11,10 @@
   </div>
 <% end %>
 
-<div class="text-center"> <h1> + </h1></div>
-
 <div class="recipe-card-pairing">
    <%= cl_image_tag @pairing.recipe.photo.key %>
   <div class=".recipe-card-pairing-infos">
-      <h2><%= link_to @pairing.recipe.title, recipe_path(@pairing.recipe) %></h2>
+      <h3><%= link_to @pairing.recipe.title, recipe_path(@pairing.recipe) %></h3>
       <p><strong>Ingredients:</strong> <%= @pairing.recipe.ingredients %></p>
       <p><strong>Instructions:</strong> <%= @pairing.recipe.instructions %></p>
   </div>
