@@ -80,7 +80,7 @@ marialva = Wine.create(
   name: "Marquês de Marialva Grande Reserva",
   year: 2011,
   country: "Portugal",
-  region: "Bairrada",
+  region: "Bairrada e Beiras",
   producer: "Adega Cooperativa de Cantanhede",
   color: 'Red',
   grapes: 'Baga, Touriga Nacional'
@@ -140,7 +140,7 @@ foz_do_arouce = Wine.create(
   name: "Quinta de Foz de Arouce",
   year: 2017,
   country: "Portugal",
-  region: "Beiras",
+  region: "Bairrada e Beiras",
   producer: "Quinta de Foz de Arouce",
   color: 'Red',
   grapes: 'Touriga Nacional, Baga'
@@ -300,6 +300,635 @@ pe_posto.save
 
 puts "wine created"
 
+barbeito5_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678638813/pocket_sommelier/iG0FVi4vSSK5yxGZ-5blpA_pb_x960_tewi4u.png")
+barbeito5 = Wine.create(
+  name: "Barbeito Reserva 5 Years Old Rainwater",
+  year: 2017,
+  country: "Portugal",
+  region: "Madeira",
+  producer: "Barbeito",
+  color: 'Liquor',
+  grapes: 'Tinta Negra Mole'
+)
+barbeito5.photo.attach(io: barbeito5_photo, filename: "barbeito5-wine", content_type: "image/png")
+barbeito5.save
+
+puts "wine created"
+
+barbeito_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678638813/pocket_sommelier/iG0FVi4vSSK5yxGZ-5blpA_pb_x960_tewi4u.png")
+barbeito = Wine.create(
+  name: "Barbeito Single Harvest Tinta Negra",
+  year: 2010,
+  country: "Portugal",
+  region: "Madeira",
+  producer: "Barbeito",
+  color: 'Liquor',
+  grapes: 'Tinta Negra Mole'
+)
+barbeito.photo.attach(io: barbeito_photo, filename: "barbeito-wine", content_type: "image/png")
+barbeito.save
+
+puts "wine created"
+
+grahams_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678639227/pocket_sommelier/SXEi5ShhQs6kNzvYFZ0vOQ_pb_x960_xtsexo.png")
+grahams = Wine.create(
+  name: "Graham's 10 Year Old Tawny Port",
+  year: 2019,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Graham's",
+  color: 'Liquor',
+  grapes: 'Tinta Cão, Touriga Francesa, Touriga Nacional, Tinta Roriz, Tinta Barroca'
+)
+grahams.photo.attach(io: grahams_photo, filename: "grahams-wine", content_type: "image/png")
+grahams.save
+
+puts "wine created"
+
+niepoort_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678639468/pocket_sommelier/aRiqHD82QkuBo6qDbZrrBA_pb_x960_m2lhww.png")
+niepoort = Wine.create(
+  name: "Ruby Port",
+  year: 2020,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Niepoort",
+  color: 'Liquor',
+  grapes: 'Tinta Francisca, Touriga Nacional, Touriga Franca, Tinto Cao'
+)
+niepoort.photo.attach(io: niepoort_photo, filename: "niepoort-wine", content_type: "image/png")
+niepoort.save
+
+puts "wine created"
+
+vallado_tawny_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678639656/pocket_sommelier/KDCjXNZwQn-Ib1VjE4tZUg_pb_x960_x7xtju.png")
+vallado_tawny = Wine.create(
+  name: "Vallado Tawny Reserva",
+  year: 2010,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Quinta do Vallado",
+  color: 'Liquor',
+  grapes: 'Touriga Nacional, Touriga Franca, Tinta Roriz'
+)
+vallado_tawny.photo.attach(io: vallado_tawny_photo, filename: "vallado_tawny-wine", content_type: "image/png")
+vallado_tawny.save
+
+puts "wine created"
+
+pacheca_moscatel_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678639799/pocket_sommelier/6vvXoGxhTnmWhPEsuMdWew_pb_x960_z6kgxl.png")
+pacheca_moscatel = Wine.create(
+  name: "Pacheca Moscatel do Douro",
+  year: 2017,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Pacheca",
+  color: 'Liquor',
+  grapes: 'Moscatel'
+)
+pacheca_moscatel.photo.attach(io: pacheca_moscatel_photo, filename: "pacheca_moscatel-wine", content_type: "image/png")
+pacheca_moscatel.save
+
+puts "wine created"
+
+bridao_late_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678640149/pocket_sommelier/alWU9irKTly2Fww42KkLeQ_pb_x960_i7ps3e.png")
+bridao_late = Wine.create(
+  name: "Bridão Late Harvest",
+  year: 2020,
+  country: "Portugal",
+  region: "Lisboa e Tejo",
+  producer: "Adega do Cartaxo",
+  color: 'Liquor',
+  grapes: 'Fernao Pires'
+)
+bridao_late.photo.attach(io: bridao_late_photo, filename: "bridao_late-wine", content_type: "image/png")
+bridao_late.save
+
+puts "wine created"
+
+mateus_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678640651/pocket_sommelier/S1xMh-EDQiqQh4EiWlMwxw_pb_x960_gj6sm7.png")
+mateus = Wine.create(
+  name: "Mateus",
+  year: 2021,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Mateus",
+  color: 'Rosé',
+  grapes: 'Touriga Nacional'
+)
+mateus.photo.attach(io: mateus_photo, filename: "mateus-wine", content_type: "image/png")
+mateus.save
+
+puts "wine created"
+
+tons_rose_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678640703/pocket_sommelier/6EnYxZCFQSaZPxyCgbBDoQ_pb_x960_lkwyn6.png")
+tons_rose = Wine.create(
+  name: "Tons de Duorum Rosé",
+  year: 2020,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Duorum",
+  color: 'Rosé',
+  grapes: 'Tinta Roriz, Touriga Nacional, Touriga Franca'
+)
+tons_rose.photo.attach(io: tons_rose_photo, filename: "tons_rose-wine", content_type: "image/png")
+tons_rose.save
+
+puts "wine created"
+
+aneto_rose_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678640922/pocket_sommelier/pmnlnmBITJKOqVxeu4MKJQ_pb_x960_bc15wl.png")
+aneto_rose = Wine.create(
+  name: "Aneto Rosé",
+  year: 2020,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Aneto",
+  color: 'Rosé',
+  grapes: 'Touriga Nacional, Touriga Franca'
+)
+aneto_rose.photo.attach(io: aneto_rose_photo, filename: "aneto_rose-wine", content_type: "image/png")
+aneto_rose.save
+
+puts "wine created"
+
+pacheca_rose_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678641064/pocket_sommelier/DqpE7DUXShO_rVH9pRjGzw_pb_x960_nb4hpb.png")
+pacheca_rose = Wine.create(
+  name: "Pacheca Reserva Rosé",
+  year: 2017,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Pacheca",
+  color: 'Rosé',
+  grapes: 'Touriga Nacional'
+)
+pacheca_rose.photo.attach(io: pacheca_rose_photo, filename: "pacheca_rose-wine", content_type: "image/png")
+pacheca_rose.save
+
+puts "wine created"
+
+servas_rose_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678641221/pocket_sommelier/RWNiXqbiRLONHyIr0ms6RA_pb_x960_lonbm3.png")
+servas_rose = Wine.create(
+  name: "Monte das Servas Rosé",
+  year: 2021,
+  country: "Portugal",
+  region: "Alentejo",
+  producer: "Herdade das Servas",
+  color: 'Rosé',
+  grapes: 'Touriga Nacional, Syrah'
+)
+servas_rose.photo.attach(io: servas_rose_photo, filename: "servas_rose-wine", content_type: "image/png")
+servas_rose.save
+
+puts "wine created"
+
+smiguel_rose_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678641349/pocket_sommelier/Z99jcABxSeW1gr9DFFLBFg_pb_x960_latsch.png")
+smiguel_rose = Wine.create(
+  name: "Herdade São Miguel Rosé",
+  year: 2021,
+  country: "Portugal",
+  region: "Alentejo",
+  producer: "Herdade de São Miguel",
+  color: 'Rosé',
+  grapes: 'Touriga Nacional, Aragonez'
+)
+smiguel_rose.photo.attach(io: smiguel_rose_photo, filename: "smiguel_rose-wine", content_type: "image/png")
+smiguel_rose.save
+
+puts "wine created"
+
+sossego_rose_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678641490/pocket_sommelier/aiiJUQNoSA-uc4KU8_LpRQ_pb_x960_oni9bd.png")
+sossego_rose = Wine.create(
+  name: "Sossego Rosé",
+  year: 2021,
+  country: "Portugal",
+  region: "Alentejo",
+  producer: "Herdade do Peso",
+  color: 'Rosé',
+  grapes: 'Touriga Nacional'
+)
+sossego_rose.photo.attach(io: sossego_rose_photo, filename: "sossego_rose-wine", content_type: "image/png")
+sossego_rose.save
+
+puts "wine created"
+
+mocho_rose_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678641606/pocket_sommelier/hPAdnuLLR-GgSEG0TbjThA_pb_x960_nfj17u.png")
+mocho_rose = Wine.create(
+  name: "Olho de Mocho Single Vineyard Reserva Rosé",
+  year: 2021,
+  country: "Portugal",
+  region: "Alentejo",
+  producer: "Herdade do Rocim",
+  color: 'Rosé',
+  grapes: 'Trincadeira'
+)
+mocho_rose.photo.attach(io: mocho_rose_photo, filename: "mocho_rose-wine", content_type: "image/png")
+mocho_rose.save
+
+puts "wine created"
+
+cabriz_rose_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678641710/pocket_sommelier/pcI-fCZkSlC5mCDJ1zg4pw_pb_x960_yibrqj.png")
+cabriz_rose = Wine.create(
+  name: "Cabriz Rosé",
+  year: 2022,
+  country: "Portugal",
+  region: "Dão",
+  producer: "Cabriz",
+  color: 'Rosé',
+  grapes: 'Touriga Nacional'
+)
+cabriz_rose.photo.attach(io: cabriz_rose_photo, filename: "cabriz_rose-wine", content_type: "image/png")
+cabriz_rose.save
+
+puts "wine created"
+
+perdigao_rose_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678641882/pocket_sommelier/IDZ8RNoJTsKX3nfIM8YtQg_pb_x960_ybezcx.png")
+perdigao_rose = Wine.create(
+  name: "Quinta do Perdigão Rosé",
+  year: 2017,
+  country: "Portugal",
+  region: "Dão",
+  producer: "Quinta do Perdigão",
+  color: 'Rosé',
+  grapes: 'Touriga Nacional, Tinta Roriz, Alfrocheiro Preto, Jaen'
+)
+perdigao_rose.photo.attach(io: perdigao_rose_photo, filename: "perdigao_rose-wine", content_type: "image/png")
+perdigao_rose.save
+
+puts "wine created"
+
+marialva_rose_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678657014/pocket_sommelier/fLV-CROWTAuHaz0dyNJ1og_pb_x960_zafttb.png")
+marialva_rose = Wine.create(
+  name: "Marquês de Marialva Rosé",
+  year: 2019,
+  country: "Portugal",
+  region: "Bairrada e Beiras",
+  producer: "Adega Cooperativa de Cantanhede",
+  color: 'Rosé',
+  grapes: 'Baga'
+)
+marialva_rose.photo.attach(io: marialva_rose_photo, filename: "marialva_rose-wine", content_type: "image/png")
+marialva_rose.save
+
+puts "wine created"
+
+plexus_rose_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678657570/pocket_sommelier/ZWaAEWhFQ8i2Ibu4rK7mFw_pb_x960_goxzdw.png")
+plexus_rose = Wine.create(
+  name: "Plexus Frizante Rosé",
+  year: 2022,
+  country: "Portugal",
+  region: "Lisboa e Tejo",
+  producer: "Adega do Cartaxo",
+  color: 'Rosé',
+  grapes: 'Castelão, Tinta Roriz'
+)
+plexus_rose.photo.attach(io: plexus_rose_photo, filename: "plexus_rose-wine", content_type: "image/png")
+plexus_rose.save
+
+puts "wine created"
+
+vulcanico_rose_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678657571/pocket_sommelier/FB62pvGJQtK8D1Lu7OrXww_pb_x960_ebj6mm.png")
+vulcanico_rose = Wine.create(
+  name: "Vulcânico Rosé",
+  year: 2017,
+  country: "Portugal",
+  region: "Açores",
+  producer: "Azores Wine Company",
+  color: 'Rosé',
+  grapes: 'Aragonez, Touriga Nacional'
+)
+vulcanico_rose.photo.attach(io: vulcanico_rose_photo, filename: "vulcanico_rose-wine", content_type: "image/png")
+vulcanico_rose.save
+
+puts "wine created"
+
+toiro_rose_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678657853/pocket_sommelier/Tu7vCytwQfGYx74XRyYB5Q_pb_x960_xrwosv.png")
+toiro_rose = Wine.create(
+  name: "Cabeça de Toiro Reserva Rosé",
+  year: 2019,
+  country: "Portugal",
+  region: "Lisboa e Tejo",
+  producer: "Caves Velhas",
+  color: 'Rosé',
+  grapes: 'Syrah, Touriga Nacional, Castelão'
+)
+toiro_rose.photo.attach(io: toiro_rose_photo, filename: "toiro_rose-wine", content_type: "image/png")
+toiro_rose.save
+
+puts "wine created"
+
+esperanca_rose_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678658126/pocket_sommelier/IWmPvBnDS96GnryXfQe3mQ_pb_x960_fnsmbm.png")
+esperanca_rose = Wine.create(
+  name: "Atlântico Rosé",
+  year: 2020,
+  country: "Portugal",
+  region: "Lisboa e Tejo",
+  producer: "Quinta da Boa Esperança",
+  color: 'Rosé',
+  grapes: 'Syrah, Touriga Nacional, Castelão'
+)
+esperanca_rose.photo.attach(io: esperanca_rose_photo, filename: "esperanca_rose-wine", content_type: "image/png")
+esperanca_rose.save
+
+puts "wine created"
+
+joaopires_rose_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678658220/pocket_sommelier/oPs8ITOeRZCMlQz7OsHfQg_pb_x960_cms5zd.png")
+joaopires_rose = Wine.create(
+  name: "João Pires Rosé",
+  year: 2020,
+  country: "Portugal",
+  region: "Península de Setúbal",
+  producer: "José Maria da Fonseca",
+  color: 'Rosé',
+  grapes: 'Touriga Nacional, Moscatel de Setúbal'
+)
+joaopires_rose.photo.attach(io: joaopires_rose_photo, filename: "joaopires_rose-wine", content_type: "image/png")
+joaopires_rose.save
+
+puts "wine created"
+
+periquita_rose_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678658423/pocket_sommelier/ZyIVfJhIQAWIifo6Iz1fOw_pb_x960_go4v6l.png")
+periquita_rose = Wine.create(
+  name: "Periquita Rosé",
+  year: 2020,
+  country: "Portugal",
+  region: "Península de Setúbal",
+  producer: "José Maria da Fonseca",
+  color: 'Rosé',
+  grapes: 'Touriga Nacional, Aragonez, Castelao'
+)
+periquita_rose.photo.attach(io: periquita_rose_photo, filename: "periquita_rose-wine", content_type: "image/png")
+periquita_rose.save
+
+puts "wine created"
+
+bacalhoa_rose_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678658633/pocket_sommelier/fRSNXbR_QL-_K42U7QqXNQ_pb_x960_ytwftb.png")
+bacalhoa_rose = Wine.create(
+  name: "Bacalhôa Roxo Rosé",
+  year: 2021,
+  country: "Portugal",
+  region: "Península de Setúbal",
+  producer: "Bacalhôa",
+  color: 'Rosé',
+  grapes: 'Moscatel Roxo'
+)
+bacalhoa_rose.photo.attach(io: bacalhoa_rose_photo, filename: "bacalhoa_rose-wine", content_type: "image/png")
+bacalhoa_rose.save
+
+puts "wine created"
+
+covela_rose_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678658820/pocket_sommelier/JYPFIyweSsife83rLqTjZQ_pb_x960_uz36ug.png")
+covela_rose = Wine.create(
+  name: "Covela Rosé",
+  year: 2020,
+  country: "Portugal",
+  region: "Vinho Verde",
+  producer: "Covela",
+  color: 'Rosé',
+  grapes: 'Touriga Nacional'
+)
+covela_rose.photo.attach(io: covela_rose_photo, filename: "covela_rose-wine", content_type: "image/png")
+covela_rose.save
+
+puts "wine created"
+
+qm_rose_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678658957/pocket_sommelier/da0KDJReSNuKV9wsR9RRIg_pb_x960_ovegv7.png")
+qm_rose = Wine.create(
+  name: "QM Rosé",
+  year: 2021,
+  country: "Portugal",
+  region: "Vinho Verde",
+  producer: "Quintas de Melgaço",
+  color: 'Rosé',
+  grapes: '	Souzão, Alvarinho'
+)
+qm_rose.photo.attach(io: qm_rose_photo, filename: "qm_rose-wine", content_type: "image/png")
+qm_rose.save
+
+puts "wine created"
+
+fonte_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678659176/pocket_sommelier/Tol5zx6ITaavFG07Xo_pog_pb_x960_rlmbzh.png")
+fonte = Wine.create(
+  name: "Aveleda Fonte",
+  year: 2022,
+  country: "Portugal",
+  region: "Vinho Verde",
+  producer: "Aveleda",
+  color: 'White',
+  grapes: 'Trajadura, Azal Branco'
+)
+fonte.photo.attach(io: fonte_photo, filename: "fonte-wine", content_type: "image/png")
+fonte.save
+
+puts "wine created"
+
+muralhas_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678659337/pocket_sommelier/zMBzgcVhQEGuy5B5lL4RSw_pb_x960_vwyt9c.png")
+muralhas = Wine.create(
+  name: "Muralhas",
+  year: 2021,
+  country: "Portugal",
+  region: "Vinho Verde",
+  producer: "Adega de Monção",
+  color: 'White',
+  grapes: 'Alvarinho'
+)
+muralhas.photo.attach(io: muralhas_photo, filename: "muralhas-wine", content_type: "image/png")
+muralhas.save
+
+puts "wine created"
+
+arca_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678659505/pocket_sommelier/-8JdTmeUT4mz_bs0SbvC9w_pb_x960_bgc7dl.png")
+arca = Wine.create(
+  name: "Arca Nova Alvarinho",
+  year: 2021,
+  country: "Portugal",
+  region: "Vinho Verde",
+  producer: "Arca Nova",
+  color: 'White',
+  grapes: 'Alvarinho'
+)
+arca.photo.attach(io: arca_photo, filename: "arca-wine", content_type: "image/png")
+arca.save
+
+puts "wine created"
+
+xisto_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678659625/pocket_sommelier/xeizUz_hQqGeVa59VzGnYQ_pb_x960_pqzsi6.png")
+xisto = Wine.create(
+  name: "Aveleda Solos de Xisto",
+  year: 2019,
+  country: "Portugal",
+  region: "Vinho Verde",
+  producer: "Aveleda",
+  color: 'White',
+  grapes: 'Alvarinho'
+)
+xisto.photo.attach(io: xisto_photo, filename: "xisto-wine", content_type: "image/png")
+xisto.save
+
+puts "wine created"
+
+soalheiro_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678659832/pocket_sommelier/Ls3ygOKiTJ6G61Kq69xQjg_pb_x960_jrs7k3.png")
+soalheiro = Wine.create(
+  name: "Soalheiro",
+  year: 2021,
+  country: "Portugal",
+  region: "Vinho Verde",
+  producer: "Soalheiro",
+  color: 'White',
+  grapes: 'Alvarinho'
+)
+soalheiro.photo.attach(io: soalheiro_photo, filename: "soalheiro-wine", content_type: "image/png")
+soalheiro.save
+
+puts "wine created"
+
+soalheiro_granit_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678659927/pocket_sommelier/6Qm2q1zwSF6BNBTSYjtCWA_pb_x960_k3zgvt.png")
+soalheiro_granit = Wine.create(
+  name: "Soalheiro Granit",
+  year: 2020,
+  country: "Portugal",
+  region: "Vinho Verde",
+  producer: "Soalheiro",
+  color: 'White',
+  grapes: 'Alvarinho'
+)
+soalheiro_granit.photo.attach(io: soalheiro_granit_photo, filename: "soalheiro_granit-wine", content_type: "image/png")
+soalheiro_granit.save
+
+puts "wine created"
+
+regueiro_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678660069/pocket_sommelier/mLwDYkVlSd-xQgaI8wkojQ_pb_x960_jlqcpc.png")
+regueiro = Wine.create(
+  name: "Regueiro Reserva",
+  year: 2021,
+  country: "Portugal",
+  region: "Vinho Verde",
+  producer: "Quinta do Regueiro",
+  color: 'White',
+  grapes: 'Alvarinho'
+)
+regueiro.photo.attach(io: regueiro_photo, filename: "regueiro-wine", content_type: "image/png")
+regueiro.save
+
+puts "wine created"
+
+bico_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678660327/pocket_sommelier/zwPHc7NRTyK_QAk6Dmyl8A_pb_x960_uhuyv4.png")
+bico = Wine.create(
+  name: "Bico Amarelo",
+  year: 2021,
+  country: "Portugal",
+  region: "Vinho Verde",
+  producer: "Esporão",
+  color: 'White',
+  grapes: 'Loureiro'
+)
+bico.photo.attach(io: bico_photo, filename: "bico-wine", content_type: "image/png")
+bico.save
+
+puts "wine created"
+
+brejoeira_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678660444/pocket_sommelier/rdLFWITRS8iyO_g9PZFlIg_pb_x960_atgpc5.png")
+brejoeira = Wine.create(
+  name: "Palácio da Brejoeira",
+  year: 2020,
+  country: "Portugal",
+  region: "Vinho Verde",
+  producer: "Palácio da Brejoeira",
+  color: 'White',
+  grapes: 'Alvarinho'
+)
+brejoeira.photo.attach(io: brejoeira_photo, filename: "brejoeira-wine", content_type: "image/png")
+brejoeira.save
+
+puts "wine created"
+
+casal_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678660661/pocket_sommelier/muxyF_iZT7GnFBGSwbl_dg_pb_x960_dphpez.png")
+casal = Wine.create(
+  name: "Casal Garcia",
+  year: 2021,
+  country: "Portugal",
+  region: "Vinho Verde",
+  producer: "Aveleda",
+  color: 'White',
+  grapes: 'Alvarinho'
+)
+casal.photo.attach(io: casal_photo, filename: "casal-wine", content_type: "image/png")
+casal.save
+
+puts "wine created"
+
+oceanico_arinto_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678660789/pocket_sommelier/dKx4VVuzS_SEHnytJwU2ug_pb_x960_f9lmfl.png")
+oceanico_arinto = Wine.create(
+  name: "Oceânico Arinto dos Açores",
+  year: 2021,
+  country: "Portugal",
+  region: "Açores",
+  producer: "Herdade do Rocim",
+  color: 'White',
+  grapes: 'Arinto'
+)
+oceanico_arinto.photo.attach(io: oceanico_arinto_photo, filename: "oceanico_arinto-wine", content_type: "image/png")
+oceanico_arinto.save
+
+puts "wine created"
+
+branco_algarve_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678660976/pocket_sommelier/9QgA7woiQQC_wyAiyNWP4A_pb_x960_nmldgn.png")
+branco_algarve = Wine.create(
+  name: "Morgado do Quintão Branco",
+  year: 2019,
+  country: "Portugal",
+  region: "Algarve",
+  producer: "Morgado do Quintão",
+  color: 'White',
+  grapes: 'Roupeiro, Codega de Larinho'
+)
+branco_algarve.photo.attach(io: branco_algarve_photo, filename: "branco_algarve-wine", content_type: "image/png")
+branco_algarve.save
+
+puts "wine created"
+
+joaopires_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678661135/pocket_sommelier/A-hK8UdfQNGyCoSdqdutAA_pb_x960_qwbqrz.png")
+joaopires = Wine.create(
+  name: "João Pires",
+  year: 2021,
+  country: "Portugal",
+  region: "Península de Setúbal",
+  producer: "José Maria da Fonseca",
+  color: 'White',
+  grapes: 'Moscatel'
+)
+joaopires.photo.attach(io: joaopires_photo, filename: "joaopires-wine", content_type: "image/png")
+joaopires.save
+
+puts "wine created"
+
+catarina_branco_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678661326/pocket_sommelier/hEFCrOR-RXubcXraEbNEaA_pb_x960_gz1iik.png")
+catarina_branco = Wine.create(
+  name: "Catarina Branco",
+  year: 2020,
+  country: "Portugal",
+  region: "Península de Setúbal",
+  producer: "Bacalhôa",
+  color: 'White',
+  grapes: 'Chardonnay, Arinto de Bucelas, Fernao Pires'
+)
+catarina_branco.photo.attach(io: catarina_branco_photo, filename: "catarina_branco-wine", content_type: "image/png")
+catarina_branco.save
+
+puts "wine created"
+
+cazas_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678661762/pocket_sommelier/DhRNVEzESG6BpT-uxpaiGQ_pb_x960_d4cihn.png")
+cazas = Wine.create(
+  name: "Cazas Novas",
+  year: 2021,
+  country: "Portugal",
+  region: "Vinho Verde",
+  producer: "Cazas Novas",
+  color: 'White',
+  grapes: 'Avesso'
+)
+cazas.photo.attach(io: cazas_photo, filename: "cazas-wine", content_type: "image/png")
+cazas.save
+
+puts "wine created"
 
 #||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 #||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
@@ -603,99 +1232,309 @@ seafood = Tag.create(name: "sea food")
 fish = Tag.create(name: "fish")
 cheese = Tag.create(name: "cheese")
 sushi = Tag.create(name: "sushi")
+spicy = Tag.create(name: "spicy")
+charcuterie = Tag.create(name: "charcuterie")
+vegetarian = Tag.create(name: "vegetarian")
+desserts = Tag.create(name: "desserts")
+goatling = Tag.create(name: "goatling")
+
+#Joao Pires wine tags:
+[seafood, fish, spicy].each do |tag|
+  WineTag.create(wine: joaopires, tag: tag)
+end
+
+#Catarina Branco wine tags:
+[seafood, fish, vegetarian].each do |tag|
+  WineTag.create(wine: catarina_branco, tag: tag)
+end
+
+#Branco wine tags:
+[seafood, fish, vegetarian, sushi].each do |tag|
+  WineTag.create(wine: branco_algarve, tag: tag)
+end
+
+#Oceanico wine tags:
+[seafood, fish, vegetarian, sushi].each do |tag|
+  WineTag.create(wine: oceanico_arinto, tag: tag)
+end
+
+#Palacio da Brejoeira wine tags:
+[seafood, fish, vegetarian, sushi, chicken, pasta, pizza].each do |tag|
+  WineTag.create(wine: brejoeira, tag: tag)
+end
+
+#Casal Garcia wine tags:
+[seafood, spicy].each do |tag|
+  WineTag.create(wine: casal, tag: tag)
+end
+
+#Bico Amarelo wine tags:
+[seafood, spicy].each do |tag|
+  WineTag.create(wine: bico, tag: tag)
+end
+
+#Cazas Novas wine tags:
+[seafood, fish, sushi, vegetarian, spicy].each do |tag|
+  WineTag.create(wine: cazas, tag: tag)
+end
+
+#Regueiro Granito wine tags:
+[seafood, fish, sushi, vegetarian, spicy].each do |tag|
+  WineTag.create(wine: regueiro, tag: tag)
+end
+
+#Soalheiro Granito wine tags:
+[seafood, fish, sushi, vegetarian, pizza, pasta].each do |tag|
+  WineTag.create(wine: soalheiro_granit, tag: tag)
+end
+
+#Soalheiro wine tags:
+[seafood, fish, sushi, vegetarian].each do |tag|
+  WineTag.create(wine: soalheiro, tag: tag)
+end
+
+#Aveleda Xisto wine tags:
+[seafood, fish, sushi, vegetarian].each do |tag|
+  WineTag.create(wine: xisto, tag: tag)
+end
+
+#Arca Nova wine tags:
+[seafood, fish, spicy, vegetarian].each do |tag|
+  WineTag.create(wine: arca, tag: tag)
+end
+
+#Muralhas wine tags:
+[seafood, fish, spicy, vegetarian].each do |tag|
+  WineTag.create(wine: muralhas, tag: tag)
+end
+
+#Fonte wine tags:
+[seafood, fish, spicy, vegetarian].each do |tag|
+  WineTag.create(wine: fonte, tag: tag)
+end
+
+#QM Rosé wine tags:
+[seafood, fish].each do |tag|
+  WineTag.create(wine: qm_rose, tag: tag)
+end
+
+#Covela Rosé wine tags:
+[seafood, fish, charcuterie].each do |tag|
+  WineTag.create(wine: covela_rose, tag: tag)
+end
+
+#Bacalhoa Rosé wine tags:
+[seafood, sushi, fish].each do |tag|
+  WineTag.create(wine: bacalhoa_rose, tag: tag)
+end
+
+#Periquita Rosé wine tags:
+[seafood, cheese].each do |tag|
+  WineTag.create(wine: periquita_rose, tag: tag)
+end
+
+#João Pires Rosé wine tags:
+[fish, seafood].each do |tag|
+  WineTag.create(wine: joaopires_rose, tag: tag)
+end
+
+#Atlântico Rosé wine tags:
+[fish, seafood, sushi].each do |tag|
+  WineTag.create(wine: esperanca_rose, tag: tag)
+end
+
+#Cabeça de Toiro Rosé wine tags:
+[fish, seafood, spicy].each do |tag|
+  WineTag.create(wine: toiro_rose, tag: tag)
+end
+
+#Vulcânico Rosé wine tags:
+[fish, seafood, vegetarian].each do |tag|
+  WineTag.create(wine: vulcanico_rose, tag: tag)
+end
+
+#Plexus Rosé wine tags:
+[fish, seafood, vegetarian, pasta, pizza, cheese, chicken].each do |tag|
+  WineTag.create(wine: plexus_rose, tag: tag)
+end
+
+#Marialva Rosé wine tags:
+[fish, seafood, vegetarian, pasta, pizza, cheese].each do |tag|
+  WineTag.create(wine: marialva_rose, tag: tag)
+end
+
+#Perdigão Rosé wine tags:
+[fish, seafood, vegetarian, pasta, pizza, cheese, sushi].each do |tag|
+  WineTag.create(wine: perdigao_rose, tag: tag)
+end
+
+#Cabriz Rosé wine tags:
+[fish, seafood, vegetarian, pasta, pizza].each do |tag|
+  WineTag.create(wine: cabriz_rose, tag: tag)
+end
+
+#Sossego Rosé wine tags:
+[fish, seafood, vegetarian].each do |tag|
+  WineTag.create(wine: sossego_rose, tag: tag)
+end
+
+#Herdade S Miguel Rosé wine tags:
+[fish, seafood, vegetarian, pasta, pizza, sushi].each do |tag|
+  WineTag.create(wine: smiguel_rose, tag: tag)
+end
+
+#Monte das Servas Rosé wine tags:
+[chicken, fish, seafood, vegetarian, pasta, cheese].each do |tag|
+  WineTag.create(wine: servas_rose, tag: tag)
+end
+
+#Pacheca Rosé wine tags:
+[chicken, fish, seafood, vegetarian, pasta].each do |tag|
+  WineTag.create(wine: pacheca_rose, tag: tag)
+end
+
+#Aneto Rosé wine tags:
+[chicken, spicy, seafood, charcuterie].each do |tag|
+  WineTag.create(wine: aneto_rose, tag: tag)
+end
+
+#Tons Rosé wine tags:
+[chicken, spicy, seafood, charcuterie].each do |tag|
+  WineTag.create(wine: tons_rose, tag: tag)
+end
+
+#Mateus wine tags:
+[chicken, spicy, seafood, charcuterie].each do |tag|
+  WineTag.create(wine: mateus, tag: tag)
+end
+
+#Bridão Colheita Tardia wine tags:
+[desserts, cheese, charcuterie].each do |tag|
+  WineTag.create(wine: bridao_late, tag: tag)
+end
+
+#Pacheca Moscatel wine tags:
+[desserts].each do |tag|
+  WineTag.create(wine: pacheca_moscatel, tag: tag)
+end
+
+#Vallado Tawny Ruby wine tags:
+[desserts, cheese].each do |tag|
+  WineTag.create(wine: vallado_tawny, tag: tag)
+end
+
+#Niepoor Ruby wine tags:
+[desserts, cheese].each do |tag|
+  WineTag.create(wine: niepoort, tag: tag)
+end
+
+#Grahams wine tags:
+[desserts, cheese].each do |tag|
+  WineTag.create(wine: grahams, tag: tag)
+end
+
+#Barbeito wine tags:
+[desserts, cheese].each do |tag|
+  WineTag.create(wine: barbeito, tag: tag)
+end
+
+#Barbeito5 wine tags:
+[desserts, cheese].each do |tag|
+  WineTag.create(wine: barbeito5, tag: tag)
+end
 
 #Titan wine tags:
-[beef, pork, pizza, cheese, pasta].each do |tag|
+[beef, pork, pizza, cheese, pasta, charcuterie].each do |tag|
   WineTag.create(wine: titan, tag: tag)
 end
 
 # Cartuxa wine tags:
-[beef, pork, cheese, pizza].each do |tag|
+[beef, pork, cheese, pizza, charcuterie, goatling].each do |tag|
   WineTag.create(wine: cartuxa, tag: tag)
 end
 
 # Marialva wine tags:
-[beef, pork, pasta, pizza].each do |tag|
+[beef, pork, pasta, pizza, goatling].each do |tag|
   WineTag.create(wine: marialva, tag: tag)
 end
 
 # Planalto wine tags:
-[fish, seafood, chicken, sushi].each do |tag|
+[fish, seafood, chicken, sushi, spicy, vegetarian].each do |tag|
   WineTag.create(wine: planalto, tag: tag)
 end
 
 # Deu La Deu wine tags:
-[fish, seafood, sushi].each do |tag|
+[fish, seafood, sushi, spicy, vegetarian].each do |tag|
   WineTag.create(wine: deu_la_deu, tag: tag)
 end
 
 # Pacheca wine tags:
-[beef, pork, chicken, pasta, cheese, pizza].each do |tag|
+[beef, pork, chicken, pasta, cheese, pizza, charcuterie].each do |tag|
   WineTag.create(wine: pacheca, tag: tag)
 end
 
 # Sossego wine tags:
-[beef, pork, chicken, pasta, cheese, pizza].each do |tag|
+[beef, pork, chicken, pasta, cheese, pizza, charcuterie].each do |tag|
   WineTag.create(wine: sossego, tag: tag)
 end
 
 # Terra a Terra wine tags:
-[chicken, fish, seafood, pasta, sushi].each do |tag|
+[chicken, fish, seafood, pasta, sushi, charcuterie, vegetarian].each do |tag|
   WineTag.create(wine: terra_a_terra, tag: tag)
 end
 
 # Foz do Arouce wine tags:
-[beef, pork, pasta, cheese].each do |tag|
+[beef, pork, pasta, cheese, charcuterie, goatling].each do |tag|
   WineTag.create(wine: foz_do_arouce, tag: tag)
 end
 
 # Carm Branco wine tags:
-[fish, seafood, sushi].each do |tag|
+[fish, seafood, sushi, spicy, vegetarian].each do |tag|
   WineTag.create(wine: carm_branco, tag: tag)
 end
 
 # O Oenológo wine tags:
-[fish, seafood, sushi].each do |tag|
+[fish, seafood, sushi, vegetarian].each do |tag|
   WineTag.create(wine: oenologo, tag: tag)
 end
 
 # Rosário wine tags:
-[beef, pork, pasta, cheese].each do |tag|
+[beef, pork, pasta, cheese, charcuterie].each do |tag|
   WineTag.create(wine: rosario, tag: tag)
 end
 
 # Ermelinda White wine tags:
-[fish, seafood, chicken, pasta, pizza].each do |tag|
+[fish, seafood, chicken, pasta, pizza, vegetarian].each do |tag|
   WineTag.create(wine: ermelinda_white, tag: tag)
 end
 
 # Ermelinda Sauvignon wine tags:
-[fish, seafood, sushi].each do |tag|
+[fish, seafood, sushi, vegetarian].each do |tag|
   WineTag.create(wine: ermelinda_sauvignon, tag: tag)
 end
 
 # Kopke Rosé wine tags:
-[fish, seafood, cheese, pasta, sushi].each do |tag|
+[fish, seafood, cheese, pasta, sushi, vegetarian].each do |tag|
   WineTag.create(wine: kopke, tag: tag)
 end
 
 # Barranco Longo wine tags:
-[fish, seafood, pasta, pizza].each do |tag|
+[fish, seafood, pasta, pizza, charcuterie].each do |tag|
   WineTag.create(wine: barranco, tag: tag)
 end
 
 # Dez Tostões Rosé wine tags:
-[fish, seafood, pasta, chicken, pizza].each do |tag|
+[fish, seafood, pasta, chicken, pizza, vegetarian].each do |tag|
   WineTag.create(wine: dez_tostoes, tag: tag)
 end
 
 # Aveleda wine tags:
-[fish, seafood, sushi].each do |tag|
+[fish, seafood, sushi, spicy, vegetarian].each do |tag|
   WineTag.create(wine: aveleda, tag: tag)
 end
 
 # Pé Posto wine tags:
-[beef, pork, pasta, pizza, cheese].each do |tag|
+[beef, pork, pasta, pizza, cheese, charcuterie, goatling].each do |tag|
   WineTag.create(wine: pe_posto, tag: tag)
 end
 
