@@ -1,21 +1,23 @@
+<div class="container-margin-2">
 <div class="pairings-title">
   <h1> My Pairings </h1>
 </div>
 
 <% @pairings.each do |pairing| %>
-<div class="pairings-border">
-  <div class="wine-card-pairings">
-    <%= link_to pairing_path(pairing) do %>
-    <%= cl_image_tag pairing.wine.photo.key %>
-  </div>
-<% end %>
-  <div class="recipe-card-pairings">
-    <%= link_to pairing_path(pairing) do %>
-    <%= cl_image_tag pairing.recipe.photo.key %>
-  </div>
-<% end %>
-<%= link_to "<i class='fa-solid fa-trash'></i>".html_safe, pairing_path(pairing), data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to delete this pairing?' }, class: "profile-icons" %>
-      </div>
+  <div class="pairing">
+    <div class="wine-card-pairings">
+      <%= link_to pairing_path(pairing) do %>
+        <%= cl_image_tag pairing.wine.photo.key, { class: 'pairing-img' } %>
+      <% end %>
+    </div>
+    <div class="recipe-card-pairings">
+      <%= link_to pairing_path(pairing) do %>
+        <%= cl_image_tag pairing.recipe.photo.key, { class: 'pairing-img recipe-img' } %>
+      <% end %>
+    </div>
+    <div class="pairing-titles">
+      <%= pairing.wine.name %><br><%= pairing.recipe.title %>
     </div>
   </div>
-  <% end %>
+<% end %>
+</div>

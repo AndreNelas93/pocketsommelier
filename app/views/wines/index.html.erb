@@ -1,4 +1,4 @@
-<div class="container-margin">
+<div class="container-margin-2">
 
   <div class="top-container">
     <div>
@@ -6,6 +6,7 @@
     </div>
     <%= cl_image_tag @recipe.photo.key, class: "avatar-pair" %>
   </div>
+
 
 <div class="container-recipes">
   <% @tags.each do |tag| %>
@@ -23,17 +24,9 @@
             <%= f.hidden_field :wine_id, as: :hidden, value: wine.id %>
             <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
             <%= f.button '<i class="fa-regular fa-bookmark"></i>'.html_safe, type: :submit, class: "round-button-mark" %>
+
           </div>
-          <% end %>
-            <div class="button-container text-center mb-5 mt-4">
-            <%= form_with url: add_to_done_pairings_path, method: "POST", data: { turbo: false } do |f| %>
-            <%= f.hidden_field :wine_id, as: :hidden, value: wine.id %>
-            <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
-            <%= f.button "Pair", class: "btn-large" %>
-          <% end %>
-        </div>
-      </div>
-      <hr>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>

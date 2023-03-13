@@ -1026,7 +1026,7 @@ tonkatsu.save
 
 puts "recipe created"
 
-caldeirada_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678379561/pocket_sommelier/transferir_lak77i.jpg")
+caldeirada_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678725553/pocket_sommelier/caldeirada-portuguesa-800_bm3cie.jpg")
 caldeirada = Recipe.create(
   title: "Portuguese fish stew (Caldeirada de peixe)",
   ingredients: "Onion, Garlic, Pepper, Bay Leaf, Cod",
