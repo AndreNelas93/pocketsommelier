@@ -7,10 +7,11 @@
     width: 100%;
   img {
     align-self: center;
-    height: 390px;
+    height: 250px;
     margin: auto;
     margin-bottom: 20px;
     width: 100%;
+    object-fit: contain;
   }
   h2 {
     margin: auto;
