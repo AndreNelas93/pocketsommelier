@@ -20,3 +20,14 @@
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
 }
+
+.avatar-pair {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  border: $selected-icons 2px solid;
+  object-fit: contain;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
