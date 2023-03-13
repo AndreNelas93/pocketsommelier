@@ -3,7 +3,7 @@
   <%= icon('fa-solid', 'arrow-left', class: "back-arrow")%>
 <% end %>
 <div class="bottle">
-<h2 class="text-center"><p><strong><%= @wine.name %></strong></h2>
+<h2 class="text-center"><%= @wine.name %></h2>
 <%= cl_image_tag @wine.photo.key %>
 <p><strong>Year:</strong><%= @wine.year %></p>
 <p><strong>Country:</strong> <%= @wine.country %></p>

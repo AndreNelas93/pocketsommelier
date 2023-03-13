@@ -2,7 +2,7 @@
 <%= link_to :back do %>
   <%= icon('fa-solid', 'arrow-left', class: "back-arrow")%>
 <% end %>
-  <h2 class="text-center"><p><strong><%= @recipe.title %></strong></h2>
+  <h2 class="text-center"><%= @recipe.title %></h2>
   <div class="recipe">
       <%= cl_image_tag @recipe.photo.key %>
       <p><strong>Ingredients:</strong> <%= @recipe.ingredients %></p>
