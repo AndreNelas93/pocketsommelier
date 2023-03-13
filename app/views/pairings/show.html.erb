@@ -1,4 +1,7 @@
 <div class="container-margin">
+<%= link_to :back do %>
+  <%= icon('fa-solid', 'arrow-left', class: "back-arrow")%>
+<% end %>
 <p><%= @pairing.wine.name %>  </p>
 <h3><%=@pairing.recipe.title %> </h3>
 
