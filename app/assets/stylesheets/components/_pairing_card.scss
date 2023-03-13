@@ -7,31 +7,29 @@
   font-weight: 300;
 }
 
-.pairings-border {
+.pairing {
   display: flex;
   justify-content: center;
   margin-top: 5%;
+  position: relative;
 }
 
-.wine-card-pairings img {
-  height: 110px;
-  width: 110px;
+.pairing-img {
+  height: 11rem;
+  width: 11rem;
   border-radius: 50%;
   object-fit: contain;
   border: 1px solid $selected-icons;
   background-color: $background;
   box-shadow:  1px 1px 15px rgba(31, 0, 0, 0.583);
-  margin-right: -10px;
-}
+  margin-left: 10px;
+  margin-top: 2em;
 
-.recipe-card-pairings img {
-  height: 110px;
-  width: 110px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid $selected-icons;
-  background-color: $background;
-  box-shadow: -10px 14px 24px rgba(31, 0, 0, 0.583);
+  &.recipe-img {
+    object-fit: cover;
+    margin-right: 10px;
+    margin-left: -10px;
+  }
 }
 
 .pairings-border .profile-icons .fa-solid{
@@ -41,4 +39,14 @@
   padding-left:10px;
  }
 
-
+ .pairing-titles {
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 2px;
+  padding: 5px;
+  box-shadow: 2px 2px 5px black;
+  font-family: $body-font;
+  padding: 10px 20px;
+ }
