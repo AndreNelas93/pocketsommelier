@@ -1,4 +1,4 @@
-<div class="container-margin-2">
+
 
 <div class="container-margin">
 <%= link_to :back do %>
@@ -17,7 +17,6 @@
    <%= link_to recipe_path(@pairing.recipe, wine_id: @pairing.wine_id) do %>
    <%= cl_image_tag @pairing.recipe.photo.key %>
    <% end %>
+<%= link_to "<i class='fa-solid fa-trash'></i>".html_safe, @pairings_path, data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to delete this pairing?' }, class: "profile-icons" %>
 </div>
 <h1 class="text-center my-5"> That's your pair! </h1>
-<%= link_to "<i class='fa-solid fa-trash'></i>".html_safe, pairing_path(pairing), data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to delete this pairing?' }, class: "profile-icons" %>
-</div>
