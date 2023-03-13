@@ -1181,6 +1181,259 @@ picanha.save
 
 puts "recipe created"
 
+ramen_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678740192/pocket_sommelier/smoky-spicy-vegan-ramen-with-homemade-broth-and-smoked-paprika-chili-oil-noodle-soup-thumb-1-1_yw13bv.jpg")
+ramen = Recipe.create(
+  title: "Veggie Ramen",
+  ingredients: ".",
+  instructions: "."
+)
+ramen.photo.attach(io: ramen_photo, filename: "ramen-recipe", content_type: "image/png")
+ramen.save
+
+puts "recipe created"
+
+chilli_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678740520/pocket_sommelier/artur-kornakov-kwJhh14nUcs-unsplash_huitl2.jpg")
+chilli = Recipe.create(
+  title: "Spicy Chilli",
+  ingredients: ".",
+  instructions: "."
+)
+chilli.photo.attach(io: chilli_photo, filename: "chilli-recipe", content_type: "image/png")
+chilli.save
+
+puts "recipe created"
+
+queijo_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678740801/pocket_sommelier/queijo-serra-da-estrela_cga2ix.jpg")
+queijo = Recipe.create(
+  title: "Serra da Estrela Cheese",
+  ingredients: ".",
+  instructions: "."
+)
+queijo.photo.attach(io: queijo_photo, filename: "queijo-recipe", content_type: "image/png")
+queijo.save
+
+puts "recipe created"
+
+bluecheese_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678740930/pocket_sommelier/jez-timms-gMW2NZ7JGrE-unsplash_a86hop.jpg")
+bluecheese = Recipe.create(
+  title: "Blue Cheese",
+  ingredients: ".",
+  instructions: "."
+)
+bluecheese.photo.attach(io: bluecheese_photo, filename: "bluecheese-recipe", content_type: "image/png")
+bluecheese.save
+
+puts "recipe created"
+
+gruyere_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678741062/pocket_sommelier/11xp-gruyere-mediumSquareAt3X_dqwhrl.jpg")
+gruyere = Recipe.create(
+  title: "Gruyere Cheese",
+  ingredients: ".",
+  instructions: "."
+)
+gruyere.photo.attach(io: gruyere_photo, filename: "gruyere-recipe", content_type: "image/png")
+gruyere.save
+
+puts "recipe created"
+
+ribs_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678741270/pocket_sommelier/alexandru-bogdan-ghita-UeYkqQh4PoI-unsplash_ic8oya.jpg")
+ribs = Recipe.create(
+  title: "Barbecue Ribs",
+  ingredients: ".",
+  instructions: "."
+)
+ribs.photo.attach(io: ribs_photo, filename: "ribs-recipe", content_type: "image/png")
+ribs.save
+
+puts "recipe created"
+
+sirloin_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678741694/pocket_sommelier/stu-moffat-Vr6Su7dd2qs-unsplash_nqzhv2.jpg")
+sirloin = Recipe.create(
+  title: "Sirloin Steak",
+  ingredients: ".",
+  instructions: "."
+)
+sirloin.photo.attach(io: sirloin_photo, filename: "sirloin-recipe", content_type: "image/png")
+sirloin.save
+
+puts "recipe created"
+
+cabrito_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678742024/pocket_sommelier/como-temperar-cabrito-para-assar-no-forno_jrmlwt.jpg")
+cabrito = Recipe.create(
+  title: "Roasted Goatling",
+  ingredients: ".",
+  instructions: "."
+)
+cabrito.photo.attach(io: cabrito_photo, filename: "cabrito-recipe", content_type: "image/png")
+cabrito.save
+
+puts "recipe created"
+
+chanfana_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678742125/pocket_sommelier/Chanfana-CHLM-11-scaled_txjf05.jpg")
+chanfana = Recipe.create(
+  title: "Portuguese Chanfana",
+  ingredients: ".",
+  instructions: "."
+)
+chanfana.photo.attach(io: chanfana_photo, filename: "chanfana-recipe", content_type: "image/png")
+chanfana.save
+
+puts "recipe created"
+
+raia_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678742592/pocket_sommelier/raia-grelhada_oqikzf.jpg")
+raia = Recipe.create(
+  title: "Grilled Stingray",
+  ingredients: ".",
+  instructions: "."
+)
+raia.photo.attach(io: raia_photo, filename: "raia-recipe", content_type: "image/png")
+raia.save
+
+puts "recipe created"
+
+seabass_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678742749/pocket_sommelier/Robalo-Grelhado-com-cogumelos-salteados2_FF_m20djh.jpg")
+seabass = Recipe.create(
+  title: "Sea Bass with Mushrooms",
+  ingredients: ".",
+  instructions: "."
+)
+seabass.photo.attach(io: seabass_photo, filename: "seabass-recipe", content_type: "image/png")
+seabass.save
+
+puts "recipe created"
+
+bras_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678742855/pocket_sommelier/bacalhau-a-bras_ynjmpp.png")
+bras = Recipe.create(
+  title: "Bacalhau à Brás",
+  ingredients: ".",
+  instructions: "."
+)
+bras.photo.attach(io: bras_photo, filename: "bras-recipe", content_type: "image/png")
+bras.save
+
+puts "recipe created"
+
+salmon_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678743048/pocket_sommelier/teriyaki_glazed_salmon-scaled_ieodmx.jpg")
+salmon = Recipe.create(
+  title: "Teryiaki Glazed Salmon",
+  ingredients: ".",
+  instructions: "."
+)
+salmon.photo.attach(io: salmon_photo, filename: "salmon-recipe", content_type: "image/png")
+salmon.save
+
+puts "recipe created"
+
+frango_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678743271/pocket_sommelier/Frango-assado-com-laranja-Essa-Receita-Funciona-5_msgflo.jpg")
+frango = Recipe.create(
+  title: "Roast Chicken with Orange",
+  ingredients: ".",
+  instructions: "."
+)
+frango.photo.attach(io: frango_photo, filename: "frango-recipe", content_type: "image/png")
+frango.save
+
+puts "recipe created"
+
+frango_guia_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678743512/pocket_sommelier/receita-do-frango-da-guia-tradicional_v8yvrx.jpg")
+frango_guia = Recipe.create(
+  title: "Piri-Piri Chicken",
+  ingredients: ".",
+  instructions: "."
+)
+frango_guia.photo.attach(io: frango_guia_photo, filename: "frango_guia-recipe", content_type: "image/png")
+frango_guia.save
+
+puts "recipe created"
+
+tofu_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678743762/pocket_sommelier/tofu-kebabs-with-peanut-sauce-7_pdn1h1.jpg")
+tofu = Recipe.create(
+  title: "Tofu Kebabs",
+  ingredients: ".",
+  instructions: "."
+)
+tofu.photo.attach(io: tofu_photo, filename: "tofu-recipe", content_type: "image/png")
+tofu.save
+
+puts "recipe created"
+
+tortelini_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678743992/pocket_sommelier/Cheese-Tortellini-010_fuve8w.jpg")
+tortelini = Recipe.create(
+  title: "Veggie Tortellini",
+  ingredients: ".",
+  instructions: "."
+)
+tortelini.photo.attach(io: tortelini_photo, filename: "tortelini-recipe", content_type: "image/png")
+tortelini.save
+
+puts "recipe created"
+
+ragu_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678744128/pocket_sommelier/Beef-Ragu-square-FS-37_fk5r3a.jpg")
+ragu = Recipe.create(
+  title: "Ragu Bolognese",
+  ingredients: ".",
+  instructions: "."
+)
+ragu.photo.attach(io: ragu_photo, filename: "ragu-recipe", content_type: "image/png")
+ragu.save
+
+puts "recipe created"
+
+presunto_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678745541/pocket_sommelier/e840dda4af545e4c1b65faeabcfc7bf7_XL_e5au3q.jpg")
+presunto = Recipe.create(
+  title: "Iberian Cured Ham",
+  ingredients: ".",
+  instructions: "."
+)
+presunto.photo.attach(io: presunto_photo, filename: "presunto-recipe", content_type: "image/png")
+presunto.save
+
+puts "recipe created"
+
+salami_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678745766/pocket_sommelier/Salame-Toscano-Tuscan-Salami-3_votfi5.jpg")
+salami = Recipe.create(
+  title: "Tuscan Salami",
+  ingredients: ".",
+  instructions: "."
+)
+salami.photo.attach(io: salami_photo, filename: "salami-recipe", content_type: "image/png")
+salami.save
+
+puts "recipe created"
+
+souffle_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678745989/pocket_sommelier/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2020__10__20201003-chocolate-souffle-test2-vicky-wasik-12-e9823310c94c43498695f5c380be52cb_yweit9.jpg")
+souffle = Recipe.create(
+  title: "Chocolate Soufflé",
+  ingredients: ".",
+  instructions: "."
+)
+souffle.photo.attach(io: souffle_photo, filename: "souffle-recipe", content_type: "image/png")
+souffle.save
+
+puts "recipe created"
+
+paodelo_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678746150/pocket_sommelier/ezgif.com-webp-to-jpg_ih7fpw.jpg")
+paodelo = Recipe.create(
+  title: "Pão de Ló de Ovar",
+  ingredients: ".",
+  instructions: "."
+)
+paodelo.photo.attach(io: paodelo_photo, filename: "paodelo-recipe", content_type: "image/png")
+paodelo.save
+
+puts "recipe created"
+
+ovosmoles_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678746398/pocket_sommelier/Ovos-Moles-de-Aveiro-IGP-edit-2._xqa2gd.jpg")
+ovosmoles = Recipe.create(
+  title: "Ovos Moles",
+  ingredients: ".",
+  instructions: "."
+)
+ovosmoles.photo.attach(io: ovosmoles_photo, filename: "ovosmoles-recipe", content_type: "image/png")
+ovosmoles.save
+
+puts "recipe created"
+
 #USERS
 
 user = User.create(
@@ -1553,3 +1806,32 @@ recipe_tag_12 = RecipeTag.create(recipe: shrimps, tag: seafood)
 recipe_tag_13 = RecipeTag.create(recipe: barnacles, tag: seafood)
 recipe_tag_14 = RecipeTag.create(recipe: lobster, tag: seafood)
 recipe_tag_15 = RecipeTag.create(recipe: picanha, tag: beef)
+recipe_tag_16 = RecipeTag.create(recipe: filetes, tag: fish)
+recipe_tag_17 = RecipeTag.create(recipe: ramen, tag: vegetarian)
+recipe_tag_18 = RecipeTag.create(recipe: ramen, tag: spicy)
+recipe_tag_19 = RecipeTag.create(recipe: chilli, tag: spicy)
+recipe_tag_20 = RecipeTag.create(recipe: queijo, tag: cheese)
+recipe_tag_21 = RecipeTag.create(recipe: bluecheese, tag: cheese)
+recipe_tag_22 = RecipeTag.create(recipe: gruyere, tag: cheese)
+recipe_tag_23 = RecipeTag.create(recipe: ribs, tag: pork)
+recipe_tag_24 = RecipeTag.create(recipe: sirloin, tag: beef)
+recipe_tag_25 = RecipeTag.create(recipe: cabrito, tag: goatling)
+recipe_tag_26 = RecipeTag.create(recipe: chanfana, tag: goatling)
+recipe_tag_27 = RecipeTag.create(recipe: raia, tag: fish)
+recipe_tag_28 = RecipeTag.create(recipe: seabass, tag: fish)
+recipe_tag_29 = RecipeTag.create(recipe: bras, tag: fish)
+recipe_tag_30 = RecipeTag.create(recipe: salmon, tag: fish)
+recipe_tag_31 = RecipeTag.create(recipe: frango, tag: chicken)
+recipe_tag_32 = RecipeTag.create(recipe: frango_guia, tag: chicken)
+recipe_tag_33 = RecipeTag.create(recipe: frango_guia, tag: spicy)
+recipe_tag_34 = RecipeTag.create(recipe: tofu, tag: vegetarian)
+recipe_tag_35 = RecipeTag.create(recipe: tortelini, tag: vegetarian)
+recipe_tag_36 = RecipeTag.create(recipe: tortelini, tag: pasta)
+recipe_tag_37 = RecipeTag.create(recipe: ragu, tag: pasta)
+recipe_tag_38 = RecipeTag.create(recipe: ragu, tag: beef)
+recipe_tag_39 = RecipeTag.create(recipe: presunto, tag: charcuterie)
+recipe_tag_40 = RecipeTag.create(recipe: presunto, tag: pork)
+recipe_tag_41 = RecipeTag.create(recipe: salami, tag: charcuterie)
+recipe_tag_42 = RecipeTag.create(recipe: salami, tag: pork)
+recipe_tag_43 = RecipeTag.create(recipe: souffle, tag: desserts)
+recipe_tag_44 = RecipeTag.create(recipe: paodelo, tag: desserts)
