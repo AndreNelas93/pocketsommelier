@@ -7,6 +7,6 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
-    @wine = Wine.find(params[:wine_id])
+    @wine = Wine.find(params[:wine_id]) if params[:wine_id]
   end
 end
