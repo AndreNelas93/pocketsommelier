@@ -1,26 +1,41 @@
+<<<<<<< HEAD
 <div class="container-margin-2">
   <div class="container d-flex justify-content-center w-75 text-left my-5">
     <h1>Pairings for <%= @recipe.title %></h1>
+=======
+<div class="container-margin">
+
+  <div class="top-container">
+    <div>
+      <h1>Pairings for <%= @recipe.title %></h1>
+    </div>
+    <%= cl_image_tag @recipe.photo.key, class: "avatar-pair" %>
+>>>>>>> 2d901c27030b13421ac3127b48594316dd2598e9
   </div>
 
+<div class="container-recipes">
   <% @tags.each do |tag| %>
     <% tag.wines.each do |wine| %>
-      <div class="card-trip">
+      <div class="bottle">
+        <%= link_to wine_path(wine, recipe_id: @recipe) do %>
         <%= cl_image_tag wine.photo.key %>
-        <div class="card-trip-infos">
-          <h2><%= link_to wine.name, wine_path(wine, recipe_id: @recipe) %></h2>
-        </div>
-        <div class="button-container">
-         <%= form_with url: add_to_done_pairings_path, method: "POST", data: { turbo: false } do |f| %>
+      </div>
+      <% end %>
+      <div class="recipe-add-pairing-form">
+
+          <h2><%= wine.name %></h2>
+
+          <%= form_with url: add_to_wishlist_pairings_path, method: "POST", data: { turbo: false } do |f| %>
+            <%= f.hidden_field :wine_id, as: :hidden, value: wine.id %>
+            <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
+            <%= f.button '<i class="fa-regular fa-bookmark"></i>'.html_safe, type: :submit, class: "recipe-add-pairing-btn" %>
+          </div>
+          <% end %>
+            <div class="button-container text-center mb-5 mt-4">
+            <%= form_with url: add_to_done_pairings_path, method: "POST", data: { turbo: false } do |f| %>
             <%= f.hidden_field :wine_id, as: :hidden, value: wine.id %>
             <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
             <%= f.button "Pair", class: "btn-large" %>
-
-          <% end %>
-         <%= form_with url: add_to_wishlist_pairings_path, method: "POST", data: { turbo: false } do |f| %>
-            <%= f.hidden_field :wine_id, as: :hidden, value: wine.id %>
-            <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
-              <%= f.button '<i class="fa-regular fa-bookmark"></i>'.html_safe, type: :submit, class: "recipe-add-pairing-btn" %>
           <% end %>
         </div>
       </div>

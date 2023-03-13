@@ -1,18 +1,44 @@
-.card-pairing {
-  background-color: gray;
-  border-radius: 5px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.2);
-  color: white;
-  margin-bottom: 12px;
-  padding: 12px;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow 0.3s ease-in-out;
-  width: 100%;
-  max-width: 500px;
-
-  &:hover {
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.4);
-  }
+.pairings-title h1{
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 8%;
+  font-family: $headers-font;
+  font-weight: 300;
 }
+
+.pairings-border {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.wine-card-pairings img {
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  object-fit: contain;
+  border: 1px solid $selected-icons;
+  background-color: $background;
+  box-shadow:  1px 1px 15px rgba(31, 0, 0, 0.583);
+  margin-right: -10px;
+}
+
+.recipe-card-pairings img {
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid $selected-icons;
+  background-color: $background;
+  box-shadow: -10px 14px 24px rgba(31, 0, 0, 0.583);
+}
+
+.pairings-border .profile-icons .fa-solid{
+  width:278% !important;
+  min-height:57px;
+  padding-top:90px;
+  padding-left:10px;
+ }
+
 
