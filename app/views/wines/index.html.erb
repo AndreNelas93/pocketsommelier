@@ -2,7 +2,7 @@
 
   <div class="top-container">
     <div>
-      <h1>Pairings for <%= @recipe.title %></h1>
+      <p>PAIRINGS FOR:</p><h2> <%= @recipe.title %></h2>
     </div>
     <%= cl_image_tag @recipe.photo.key, class: "avatar-pair" %>
   </div>
@@ -12,17 +12,17 @@
     <% tag.wines.each do |wine| %>
       <div class="bottle">
         <%= link_to wine_path(wine, recipe_id: @recipe) do %>
-        <%= cl_image_tag wine.photo.key %>
+          <%= cl_image_tag wine.photo.key %>
       </div>
       <% end %>
       <div class="recipe-add-pairing-form">
 
-          <h2><%= wine.name %></h2>
+        <p><%= wine.name %></p>
 
           <%= form_with url: add_to_wishlist_pairings_path, method: "POST", data: { turbo: false } do |f| %>
             <%= f.hidden_field :wine_id, as: :hidden, value: wine.id %>
             <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
-            <%= f.button '<i class="fa-regular fa-bookmark"></i>'.html_safe, type: :submit, class: "recipe-add-pairing-btn" %>
+            <%= f.button '<i class="fa-regular fa-bookmark"></i>'.html_safe, type: :submit, class: "round-button-mark" %>
           </div>
           <% end %>
             <div class="button-container text-center mb-5 mt-4">
