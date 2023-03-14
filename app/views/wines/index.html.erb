@@ -7,39 +7,45 @@
     <%= cl_image_tag @recipe.photo.key, class: "avatar-pair-recipe" %>
   </div>
 
-<div class="container-filters">
-<p class="btn-filter">all</p>
-<p class="btn-filter">red</p>
-<p class="btn-filter">white</p>
-<p class="btn-filter">rosé</p>
+<div class="container-filters-wines">
+
+<%= link_to wines_path(recipe: @recipe.title) do %>
+    <p class="btn-filter">All</p>
+  <% end %>
+<% @colors.each do |color| %>
+  <%= link_to wines_path(color: color, recipe: @recipe.title) do %>
+    <p class="btn-filter"><%= color %></p>
+  <% end %>
+<% end %>
+
+
 </div>
 
 <div class="container-wines">
-  <% @tags.each do |tag| %>
-    <% tag.wines.each do |wine| %>
-      <div class="bottle">
-        <%= link_to wine_path(wine, recipe_id: @recipe) do %>
-          <%= cl_image_tag wine.photo.key %>
-      </div>
-      <% end %>
-      <div class="recipe-add-pairing-form">
 
-        <p><%= wine.name %></p>
-
-          <%= form_with url: add_to_wishlist_pairings_path, method: "POST", data: { turbo: false } do |f| %>
-            <%= f.hidden_field :wine_id, as: :hidden, value: wine.id %>
-            <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
-            <%= f.button '<i class="fa-regular fa-bookmark"></i>'.html_safe, type: :submit, class: "round-button-mark" %>
-          <% end %>
-          </div>
-          <div class="button-container text-center mb-5 mt-4">
-          <%= form_with url: add_to_done_pairings_path, method: "POST", data: { turbo: false } do |f| %>
-            <%= f.hidden_field :wine_id, as: :hidden, value: wine.id %>
-            <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
-            <%= f.button "Pair", class: "btn-large" %>
-          <% end %>
-          </div>
+  <% @wines.each do |wine| %>
+    <div class="bottle">
+      <%= link_to wine_path(wine, recipe_id: @recipe) do %>
+        <%= cl_image_tag wine.photo.key %>
       <% end %>
-    <% end %>
-  </div>
+    </div>
+    <div class="recipe-add-pairing-form">
+
+      <p><%= wine.name %></p>
+
+      <%= form_with url: add_to_wishlist_pairings_path, method: "POST", data: { turbo: false } do |f| %>
+        <%= f.hidden_field :wine_id, as: :hidden, value: wine.id %>
+        <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
+        <%= f.button '<i class="fa-regular fa-bookmark"></i>'.html_safe, type: :submit, class: "round-button-mark" %>
+      <% end %>
+    </div>
+    <div class="button-container text-center mb-5 mt-4">
+      <%= form_with url: add_to_done_pairings_path, method: "POST", data: { turbo: false } do |f| %>
+        <%= f.hidden_field :wine_id, as: :hidden, value: wine.id %>
+        <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
+        <%= f.button "Pair", class: "btn-large" %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
 </div>
