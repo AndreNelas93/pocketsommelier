@@ -77,7 +77,7 @@
 }
 
 .container-recipes {
-  margin-top: 119px;
+  margin-top: 60px;
 
   .img-recipe{
     width: 94%;
@@ -154,4 +154,36 @@
   border-color: $fontcolor;
   border-style: solid;
   border-width: 1px 0 1px 0;
+}
+
+.container-filters-recipes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  background-color: $background;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 0;
+  border-color: $fontcolor;
+  border-style: solid;
+  border-width: 0px 0 1px 0;
+}
+
+.container-filters-cellar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  background-color: $background;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 0;
+  border-color: $fontcolor;
+  border-style: solid;
+  border-width: 1px 0 1px 0;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }

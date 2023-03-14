@@ -7,6 +7,21 @@
     <%= cl_image_tag @wine.photo.key, class: "avatar-pair" %>
   </div>
 
+<div class="container-filters">
+<p class="btn-filter">all</p>
+<p class="btn-filter">pizza/pasta</p>
+<p class="btn-filter">seafood</p>
+<p class="btn-filter">chicken</p>
+</div>
+<div class="container-filters-recipes">
+<p class="btn-filter">beef</p>
+<p class="btn-filter">snacks</p>
+<p class="btn-filter">fish</p>
+<p class="btn-filter">pork</p>
+</div>
+
+
+
 <div class="container-recipes">
   <% @tags.each do |tag| %>
     <% tag.recipes.each do |recipe| %>
