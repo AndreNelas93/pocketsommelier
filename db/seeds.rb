@@ -930,6 +930,276 @@ cazas.save
 
 puts "wine created"
 
+dmaria_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678807071/pocket_sommelier/QHQ7ctZ0QiqUSwGbz3WuHw_pb_x960_gxujsf.png")
+dmaria = Wine.create(
+  name: "Vale D. Maria Douro Superior",
+  year: 2020,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Quinta Vale D. Maria",
+  color: 'Red',
+  grapes: 'Touriga Nacional'
+)
+dmaria.photo.attach(io: dmaria_photo, filename: "dmaria-wine", content_type: "image/png")
+dmaria.save
+
+puts "wine created"
+
+papafigos_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678807265/pocket_sommelier/VWPrKN9URnKtbo8BReaVLQ_pb_x960_lbwrog.png")
+papafigos = Wine.create(
+  name: "Papa Figos",
+  year: 2020,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Casa Ferreirinha",
+  color: 'Red',
+  grapes: '	Tempranillo, Touriga Nacional'
+)
+papafigos.photo.attach(io: papafigos_photo, filename: "papafigos-wine", content_type: "image/png")
+papafigos.save
+
+puts "wine created"
+
+aneto_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678807409/pocket_sommelier/orEkdSoOS1GGDWvUISF8tQ_pb_x960_dappsl.png")
+aneto = Wine.create(
+  name: "Aneto",
+  year: 2020,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Aneto",
+  color: 'Red',
+  grapes: 'Touriga Nacional, Touriga Franca, Tinta Roriz, Tinto Cão'
+)
+aneto.photo.attach(io: aneto_photo, filename: "aneto-wine", content_type: "image/png")
+aneto.save
+
+puts "wine created"
+
+aneto_reserva_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678807552/pocket_sommelier/zZhFm471SPG5lNZ273NuSw_pb_x960_ay1vba.png")
+aneto_reserva = Wine.create(
+  name: "Aneto Grande Reserva",
+  year: 2018,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Aneto",
+  color: 'Red',
+  grapes: 'Touriga Nacional, Tinta Roriz'
+)
+aneto_reserva.photo.attach(io: aneto_reserva_photo, filename: "aneto_reserva-wine", content_type: "image/png")
+aneto_reserva.save
+
+puts "wine created"
+
+dialogo_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678807678/pocket_sommelier/QdAKX8fAQTWdeJ20oPgn5g_pb_x960_zzk0fb.png")
+dialogo = Wine.create(
+  name: "Diálogo",
+  year: 2020,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Niepoort",
+  color: 'Red',
+  grapes: 'Touriga Nacional'
+)
+dialogo.photo.attach(io: dialogo_photo, filename: "dialogo-wine", content_type: "image/png")
+dialogo.save
+
+puts "wine created"
+
+vertente_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678807774/pocket_sommelier/bIpwAeoXQ9-b5b2oQ5Zm3w_pb_x960_e43zjf.png")
+vertente = Wine.create(
+  name: "Vertente",
+  year: 2017,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Niepoort",
+  color: 'Red',
+  grapes: '	Touriga Franca'
+)
+vertente.photo.attach(io: vertente_photo, filename: "vertente-wine", content_type: "image/png")
+vertente.save
+
+puts "wine created"
+
+redoma_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678807965/pocket_sommelier/ZtHXAZ8sT4aWNT8NUBth-A_pb_x960_sbgmcj.png")
+redoma = Wine.create(
+  name: "Redoma",
+  year: 2017,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Niepoort",
+  color: 'Red',
+  grapes: '	Tinta Amarela'
+)
+redoma.photo.attach(io: redoma_photo, filename: "redoma-wine", content_type: "image/png")
+redoma.save
+
+puts "wine created"
+
+charme_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678808033/pocket_sommelier/6BEbJyYwRyGGF1Q3jpc-ng_pb_x960_kxpygl.png")
+charme = Wine.create(
+  name: "Charme",
+  year: 2011,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Niepoort",
+  color: 'Red',
+  grapes: 'Tinta Roriz'
+)
+charme.photo.attach(io: charme_photo, filename: "charme-wine", content_type: "image/png")
+charme.save
+
+puts "wine created"
+
+leda_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678808155/pocket_sommelier/p12i_pN-QA-Nzi5J-8wbrg_pb_x960_bndlwm.png")
+leda = Wine.create(
+  name: "Quinta da Leda",
+  year: 2016,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Casa Ferreirinha",
+  color: 'Red',
+  grapes: 'Touriga Nacional'
+)
+leda.photo.attach(io: leda_photo, filename: "leda-wine", content_type: "image/png")
+leda.save
+
+puts "wine created"
+
+especial_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678808288/pocket_sommelier/uubInaqgRGWSlr5iOmBZIQ_pb_x960_qosufo.png")
+especial = Wine.create(
+  name: "Reserva Especial",
+  year: 2007,
+  country: "Portugal",
+  region: "Douro",
+  producer: "Casa Ferreirinha",
+  color: 'Red',
+  grapes: '	Tinta Roriz, Cabernet Sauvignon, Cabernet Franc, Touriga Nacional, Touriga Franca'
+)
+especial.photo.attach(io: especial_photo, filename: "especial-wine", content_type: "image/png")
+especial.save
+
+puts "wine created"
+
+servas_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678808478/pocket_sommelier/-wwfjeA5RTiPSiOtxVwijg_pb_x960_abjxo4.png")
+servas = Wine.create(
+  name: "Alicante Bouschet Reserva Estremoz",
+  year: 2015,
+  country: "Portugal",
+  region: "Alentejo",
+  producer: "Herdade das Servas",
+  color: 'Red',
+  grapes: 'Alicante Bouschet'
+)
+servas.photo.attach(io: servas_photo, filename: "servas-wine", content_type: "image/png")
+servas.save
+
+puts "wine created"
+
+smiguel_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678808651/pocket_sommelier/TvkfjD-bRAC2SofuoXB3Vw_pb_x960_snorrt.png")
+smiguel = Wine.create(
+  name: "Herdade de São Miguel",
+  year: 2021,
+  country: "Portugal",
+  region: "Alentejo",
+  producer: "Herdade de São Miguel",
+  color: 'Red',
+  grapes: 'Syrah, Cabernet Sauvignon, Alicante Bouschet, Touriga Nacional'
+)
+smiguel.photo.attach(io: smiguel_photo, filename: "smiguel-wine", content_type: "image/png")
+smiguel.save
+
+puts "wine created"
+
+rocim_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678809694/pocket_sommelier/lgBB79dhSgCxN8eUBXYNAQ_pb_x960_cqxlol.png")
+rocim = Wine.create(
+  name: "Rocim Reserva",
+  year: 2020,
+  country: "Portugal",
+  region: "Alentejo",
+  producer: "Herdade do Rocim",
+  color: 'Red',
+  grapes: '	Aragonez, Alicante Bouschet, Touriga Nacional'
+)
+rocim.photo.attach(io: rocim_photo, filename: "rocim-wine", content_type: "image/png")
+rocim.save
+
+puts "wine created"
+
+clay_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678809832/pocket_sommelier/KojEvsJFSniKsryeiOtkXQ_pb_x960_w5mlwz.png")
+clay = Wine.create(
+  name: "Clay Aged",
+  year: 2016,
+  country: "Portugal",
+  region: "Alentejo",
+  producer: "Herdade do Rocim",
+  color: 'Red',
+  grapes: 'Touriga Nacional, Touriga Franca, Tinta Barroca'
+)
+clay.photo.attach(io: clay_photo, filename: "clay-wine", content_type: "image/png")
+clay.save
+
+puts "wine created"
+
+micaela_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678809961/pocket_sommelier/UEbrjSZoRBqNP9B7Gb2Gew_pb_x960_plurj5.png")
+micaela = Wine.create(
+  name: "Vinha da Micaela",
+  year: 2018,
+  country: "Portugal",
+  region: "Alentejo",
+  producer: "Herdade do Rocim",
+  color: 'Red',
+  grapes: 'Non revealed'
+)
+micaela.photo.attach(io: micaela_photo, filename: "micaela-wine", content_type: "image/png")
+micaela.save
+
+puts "wine created"
+
+indio_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678810158/pocket_sommelier/dVPM2uEiQTSrTjfZcjbVUA_pb_x960_vfjthz.png")
+indio = Wine.create(
+  name: "Indio Rei Reserva",
+  year: 2016,
+  country: "Portugal",
+  region: "Dão",
+  producer: "Amora Brava",
+  color: 'Red',
+  grapes: 'Touriga Nacional, Tinta Roriz'
+)
+indio.photo.attach(io: indio_photo, filename: "indio-wine", content_type: "image/png")
+indio.save
+
+puts "wine created"
+
+adescoberta_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678810456/pocket_sommelier/e6rzG92RS12wq2vFrsR9xg_pb_x960_oexncg.png")
+adescoberta = Wine.create(
+  name: "Passarella A Descoberta",
+  year: 2020,
+  country: "Portugal",
+  region: "Dão",
+  producer: "Casa Passarella",
+  color: 'Red',
+  grapes: '	Touriga Nacional, Tinta Roriz, Alfrocheiro, Jaen'
+)
+adescoberta.photo.attach(io: adescoberta_photo, filename: "adescoberta-wine", content_type: "image/png")
+adescoberta.save
+
+puts "wine created"
+
+abanico_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678810518/pocket_sommelier/TAj5frnUTnyxnkvNg8NlbA_pb_x960_mnmdu7.png")
+abanico = Wine.create(
+  name: "Passarella Abanico Reserva",
+  year: 2019,
+  country: "Portugal",
+  region: "Dão",
+  producer: "Casa Passarella",
+  color: 'Red',
+  grapes: '	Touriga Nacional, Alfrocheiro, Jaen'
+)
+abanico.photo.attach(io: abanico_photo, filename: "abanico-wine", content_type: "image/png")
+abanico.save
+
+puts "wine created"
+
 #||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 #||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 #||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
@@ -1434,6 +1704,17 @@ ovosmoles.save
 
 puts "recipe created"
 
+bolinhos_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678789303/pocket_sommelier/IMG_20190402_210730_ds4x4f.jpg")
+bolinhos = Recipe.create(
+  title: "Bolinhos de Amor",
+  ingredients: ".",
+  instructions: "."
+)
+bolinhos.photo.attach(io: bolinhos_photo, filename: "bolinhos-recipe", content_type: "image/png")
+bolinhos.save
+
+puts "recipe created"
+
 #USERS
 
 user = User.create(
@@ -1490,6 +1771,96 @@ charcuterie = Tag.create(name: "charcuterie")
 vegetarian = Tag.create(name: "vegetarian")
 desserts = Tag.create(name: "desserts")
 goatling = Tag.create(name: "goatling")
+
+#Abanico wine tags:
+[beef, cheese, chicken, pizza, pork, charcuterie, pasta, goatling].each do |tag|
+  WineTag.create(wine: abanico, tag: tag)
+end
+
+#A Descoberta wine tags:
+[beef, cheese, chicken, pizza, pork, charcuterie, pasta, goatling].each do |tag|
+  WineTag.create(wine: adescoberta, tag: tag)
+end
+
+#Indio Rei wine tags:
+[beef, cheese, pizza, pork, charcuterie, pasta, goatling].each do |tag|
+  WineTag.create(wine: indio, tag: tag)
+end
+
+#Vinha da Micaela wine tags:
+[beef, cheese, pizza, pork, charcuterie, pasta, goatling].each do |tag|
+  WineTag.create(wine: micaela, tag: tag)
+end
+
+#Rocim wine tags:
+[beef, cheese, pork, charcuterie, pasta, goatling].each do |tag|
+  WineTag.create(wine: clay, tag: tag)
+end
+
+#Rocim wine tags:
+[beef, cheese, pork, charcuterie, pasta].each do |tag|
+  WineTag.create(wine: rocim, tag: tag)
+end
+
+#Herdade de S Miguel wine tags:
+[beef, cheese, pork, chicken, charcuterie, pasta, goatling].each do |tag|
+  WineTag.create(wine: smiguel, tag: tag)
+end
+
+#Herdade das Servas Especial wine tags:
+[beef, cheese, pork, chicken, charcuterie, pasta, goatling].each do |tag|
+  WineTag.create(wine: servas, tag: tag)
+end
+
+#Reserva Especial wine tags:
+[beef, cheese, pasta, goatling].each do |tag|
+  WineTag.create(wine: especial, tag: tag)
+end
+
+#Quinta da Leda wine tags:
+[beef, cheese, charcuterie, pasta, pizza, pork].each do |tag|
+  WineTag.create(wine: leda, tag: tag)
+end
+
+#Charme wine tags:
+[beef, cheese, charcuterie, pasta, pizza, pork, vegetarian].each do |tag|
+  WineTag.create(wine: charme, tag: tag)
+end
+
+#Redoma wine tags:
+[chicken, beef, cheese, charcuterie, pasta, pizza, pork].each do |tag|
+  WineTag.create(wine: redoma, tag: tag)
+end
+
+#Vertente wine tags:
+[chicken, cheese, charcuterie, pasta, pizza, pork].each do |tag|
+  WineTag.create(wine: vertente, tag: tag)
+end
+
+#Dialogo wine tags:
+[chicken, pasta, pizza, pork].each do |tag|
+  WineTag.create(wine: dialogo, tag: tag)
+end
+
+#Aneto GR wine tags:
+[beef, goatling, pasta, pizza, cheese, charcuterie, pork].each do |tag|
+  WineTag.create(wine: aneto_reserva, tag: tag)
+end
+
+#Aneto wine tags:
+[beef, pork, goatling, pasta, pizza].each do |tag|
+  WineTag.create(wine: aneto, tag: tag)
+end
+
+#Papa Figos wine tags:
+[pizza, charcuterie].each do |tag|
+  WineTag.create(wine: papafigos, tag: tag)
+end
+
+#Vale D Maria wine tags:
+[beef, pork, pasta, pizza, cheese, vegetarian].each do |tag|
+  WineTag.create(wine: dmaria, tag: tag)
+end
 
 #Joao Pires wine tags:
 [seafood, fish, spicy].each do |tag|
@@ -1835,3 +2206,4 @@ recipe_tag_41 = RecipeTag.create(recipe: salami, tag: charcuterie)
 recipe_tag_42 = RecipeTag.create(recipe: salami, tag: pork)
 recipe_tag_43 = RecipeTag.create(recipe: souffle, tag: desserts)
 recipe_tag_44 = RecipeTag.create(recipe: paodelo, tag: desserts)
+recipe_tag_45 = RecipeTag.create(recipe: bolinhos, tag: desserts)
