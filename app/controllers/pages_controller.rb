@@ -13,7 +13,12 @@ class PagesController < ApplicationController
   end
 
   def cellar
-    @wines = Wine.all
+    @colors = ["Red","White","Rosé"]
+    if params[:color]
+      @wines = Wine.where(color: params[:color])
+    else
+      @wines = Wine.all
+    end
   end
 
   def profile

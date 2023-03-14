@@ -1,13 +1,21 @@
 <div class="container d-flex justify-content-center mt-3">
   <%= image_tag "logofabio.png", style:"height: 80px;" %>
 </div>
+
 <hr>
 
 <div class="container-filters-cellar">
-  <p class="btn-filter">all</p>
-  <p class="btn-filter">red</p>
-  <p class="btn-filter">white</p>
-  <p class="btn-filter">rosé</p>
+
+<%= link_to cellar_path do %>
+    <p class="btn-filter">All</p>
+  <% end %>
+<% @colors.each do |color| %>
+  <%= link_to cellar_path(color: color) do %>
+    <p class="btn-filter"><%= color %></p>
+  <% end %>
+<% end %>
+
+
 </div>
 
 <div class="container-margin-2">
