@@ -4,11 +4,17 @@
     <div>
       <p>PAIRINGS FOR:</p><h2> <%= @recipe.title %></h2>
     </div>
-    <%= cl_image_tag @recipe.photo.key, class: "avatar-pair" %>
+    <%= cl_image_tag @recipe.photo.key, class: "avatar-pair-recipe" %>
   </div>
 
+<div class="container-filters">
+<p class="btn-filter">all</p>
+<p class="btn-filter">red</p>
+<p class="btn-filter">white</p>
+<p class="btn-filter">rosé</p>
+</div>
 
-<div class="container-recipes">
+<div class="container-wines">
   <% @tags.each do |tag| %>
     <% tag.wines.each do |wine| %>
       <div class="bottle">
