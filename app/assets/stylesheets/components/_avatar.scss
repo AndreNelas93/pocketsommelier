@@ -3,7 +3,9 @@
   border-radius: 50%;
 }
 .avatar-large {
-  width: 58px;
+  width: 12rem;
+  height: 12rem;
+  object-fit: cover;
   border-radius: 50%;
   box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
   border: $selected-icons 2px solid;
@@ -28,6 +30,17 @@
   box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
   border: $selected-icons 2px solid;
   object-fit: contain;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.avatar-pair-recipe {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  border: $selected-icons 2px solid;
+  object-fit: cover;
   margin-top: 20px;
   margin-bottom: 20px;
 }
