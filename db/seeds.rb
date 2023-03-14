@@ -1200,6 +1200,21 @@ abanico.save
 
 puts "wine created"
 
+aldeias_photo = URI.open("https://res.cloudinary.com/dklcbnwok/image/upload/v1678817581/pocket_sommelier/9hFM-hfmSW2iNrDtLY1FLA_pb_x960_ysysn9.png")
+aldeias = Wine.create(
+  name: "Aldeia de Cima",
+  year: 2019,
+  country: "Portugal",
+  region: "Alentejo",
+  producer: "Herdade Aldeia de Cimaa",
+  color: 'Red',
+  grapes: 'Alfrocheiro, Aragonez, Trincadeira'
+)
+aldeias.photo.attach(io: aldeias_photo, filename: "aldeias-wine", content_type: "image/png")
+aldeias.save
+
+puts "wine created"
+
 #||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 #||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 #||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
@@ -1771,6 +1786,11 @@ charcuterie = Tag.create(name: "charcuterie")
 vegetarian = Tag.create(name: "vegetarian")
 desserts = Tag.create(name: "desserts")
 goatling = Tag.create(name: "goatling")
+
+#Aldeia de Cima wine tags:
+[beef, cheese, pizza, pork, pasta].each do |tag|
+  WineTag.create(wine: aldeias, tag: tag)
+end
 
 #Abanico wine tags:
 [beef, cheese, chicken, pizza, pork, charcuterie, pasta, goatling].each do |tag|
