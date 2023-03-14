@@ -94,6 +94,29 @@
   }
 }
 
+
+.container-wines {
+  margin-top: 50px;
+
+  .img-recipe{
+    width: 94%;
+    object-fit: cover;
+    height: 500px;
+    border-radius: 25px 25px 0 0 ;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+  .text-deco {
+    text-decoration: none;
+
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+}
+
 .container-info {
   display: flex;
   justify-content: space-between;
@@ -116,4 +139,19 @@
   }
 
 
+}
+
+.container-filters {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  background-color: $background;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 110px;
+  border-color: $fontcolor;
+  border-style: solid;
+  border-width: 1px 0 1px 0;
 }
