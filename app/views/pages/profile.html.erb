@@ -3,7 +3,11 @@
 </div>
 <hr>
 <div class="container mt-4 text-center">
-  <%= cl_image_tag current_user.photo.key, class:"avatar-large" %>
+  <% if current_user.photo.attached? %>
+    <%= cl_image_tag current_user.photo.key, class:"avatar-large" %>
+  <% else %>
+    <%= image_tag "userblanck.webp", class:"avatar-large" %>
+  <% end %>
 </div>
 <div class="icons-container px-5">
     <%= link_to edit_user_registration_path do %>
