@@ -1,7 +1,7 @@
 class PairingsController < ApplicationController
 
   def index
-    @all_pairings = current_user.pairings
+    @all_pairings = current_user.pairings.order('created_at DESC')
     if params[:favorite]
       @pairings = @all_pairings.select { |pairing| pairing.favorite.to_s == params[:favorite] }
     else

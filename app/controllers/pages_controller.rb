@@ -15,9 +15,9 @@ class PagesController < ApplicationController
   def cellar
     @colors = ["Red", "White", "Rosé"]
     if params[:color]
-      @wines = Wine.where(color: params[:color])
+      @wines = Wine.where(color: params[:color]).order(name: :asc)
     else
-      @wines = Wine.all
+      @wines = Wine.all.order(name: :asc)
     end
   end
 
