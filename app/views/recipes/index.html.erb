@@ -45,7 +45,7 @@
           </div>
 
         <div class="button-container text-center mb-5 mt-4">
-          <%= form_with url: add_to_done_pairings_path, method: "POST", data: { turbo: false } do |f| %>
+          <%= form_with url: add_to_done_pairings_path(created: "true"), method: "POST", data: { turbo: false } do |f| %>
             <%= f.hidden_field :wine_id, as: :hidden, value: @wine.id %>
             <%= f.hidden_field :recipe_id, as: :hidden, value: recipe.id %>
             <%= f.button "Pair", class: "btn-large" %>
