@@ -1,7 +1,12 @@
 class PairingsController < ApplicationController
 
   def index
-    @pairings = current_user.pairings
+    @all_pairings = current_user.pairings
+    if params[:favorite]
+      @pairings = @all_pairings.select { |pairing| pairing.favorite.to_s == params[:favorite] }
+    else
+      @pairings = @all_pairings.select { |pairing| pairing.favorite == false }
+    end
   end
 
   def show
