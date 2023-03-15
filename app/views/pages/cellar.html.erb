@@ -7,11 +7,19 @@
 <div class="container-filters-cellar">
 
 <%= link_to cellar_path do %>
+  <% if params[:color] %>
     <p class="btn-filter">All</p>
+  <% else %>
+    <p class="active-btn-filter">All</p>
   <% end %>
+<% end %>
 <% @colors.each do |color| %>
   <%= link_to cellar_path(color: color) do %>
-    <p class="btn-filter"><%= color %></p>
+    <% if params[:color] == color %>
+      <p class="active-btn-filter"><%= color %></p>
+    <% else %>
+      <p class="btn-filter"><%= color %></p>
+    <% end %>
   <% end %>
 <% end %>
 

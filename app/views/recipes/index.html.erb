@@ -9,11 +9,19 @@
 
 <div class="container-filters">
   <%= link_to recipes_path(wine: @wine.name) do %>
+    <% if params[:filter] %>
       <p class="btn-filter">All</p>
+    <% else %>
+      <p class="active-btn-filter">All</p>
     <% end %>
+  <% end %>
   <% @tags.take(5).each do |tag| %>
     <%= link_to recipes_path(filter: tag.name, wine: @wine.name) do %>
-      <p class="btn-filter"><%= tag.name %></p>
+      <% if tag.name == params[:filter] %>
+        <p class="active-btn-filter"><%= tag.name %></p>
+      <% else %>
+        <p class="btn-filter"><%= tag.name %></p>
+      <% end %>
     <% end %>
   <% end %>
 </div>
