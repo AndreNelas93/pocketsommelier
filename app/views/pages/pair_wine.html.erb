@@ -8,7 +8,12 @@
   </div>
   <%= form_with url: recipes_path, method: :get, data: { turbo: false } do |f| %>
     <div class="d-flex justify-content-center">
-      <%= f.collection_select(:wine, @wines, :name, :name, :prompt => "Select your wine") %>
+      <%= text_field_tag :wine, params[:wine], autocomplete: :off, class: "form-control search-input", list: "wines" %>
+      <datalist id="wines">
+        <% @wines.each do |wine| %>
+          <option value="<%= wine.name %>">
+        <% end %>
+      </datalist>
     </div>
     <div class="d-flex justify-content-center">
       <%= f.submit "Pair", class:"btn-large btn-position" %>
