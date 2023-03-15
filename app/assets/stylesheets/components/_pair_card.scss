@@ -22,16 +22,16 @@
 }
 
 
-// .card-product:hover {
-//   color: white;
-//   img {
-//     transform: translateX(300px);
-//     transition: 0.2s;
-//   }
-//   p, h2 {
-//     color:white;
-//   }
-// }
+.card-product:hover {
+  color: transparent;
+  img {
+    transform: translateX(300px);
+    transition: 0.9s;
+  }
+  p, h2 {
+    color:transparent;
+  }
+}
 
 
 .card-product h2 {
