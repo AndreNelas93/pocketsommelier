@@ -10,11 +10,19 @@
 <div class="container-filters-wines">
 
 <%= link_to wines_path(recipe: @recipe.title) do %>
+  <% if params[:color] %>
     <p class="btn-filter">All</p>
+  <% else %>
+    <p class="active-btn-filter">All</p>
   <% end %>
+<% end %>
 <% @colors.uniq.each do |color| %>
   <%= link_to wines_path(color: color, recipe: @recipe.title) do %>
-    <p class="btn-filter"><%= color %></p>
+    <% if color == params[:color] %>
+      <p class="active-btn-filter"><%= color %></p>
+    <% else %>
+      <p class="btn-filter"><%= color %></p>
+    <% end %>
   <% end %>
 <% end %>
 

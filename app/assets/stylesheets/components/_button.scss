@@ -75,6 +75,25 @@
   min-height: 23px;
   margin-bottom: 1px;
   margin-top: 1px;
+
+}
+
+.active-btn-filter {
+  font-family: 'Source Sans Pro';
+  font-size: 14px;
+  color: $fontcolor;
+  background-color: $buttons;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  min-width: 45px;
+  max-width: 88px;
+  min-height: 23px;
+  margin-bottom: 1px;
+  margin-top: 1px;
 }
 
 .btn-filter:hover {
