@@ -4,5 +4,12 @@
 
 import { application } from "./application"
 
+import FavoriteButtonController from "./favorite_button_controller"
+application.register("favorite-button", FavoriteButtonController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+
+import Favorite_Button_Controller from "./favorite_button_controller.js"
+application.register("favorite_button", Favorite_Button_Controller)

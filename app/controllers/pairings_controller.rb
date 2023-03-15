@@ -35,11 +35,20 @@ class PairingsController < ApplicationController
       @wine = @pairing.wine
       @tags = @pairing.wine.tags
       past_path = Rails.application.routes.recognize_path(request.referrer)
-      if past_path[:controller] == "recipes"
-        redirect_to recipes_path(wine: @wine.name)
-      else
-        redirect_to wines_path(recipe: @pairing.recipe.title)
+
+      respond_to do |format|
+        format.turbo_stream {}
+        format.json {}
+        format.html {
+          if past_path[:controller] == "recipes"
+            redirect_to recipes_path(wine: @wine.name)
+          else
+            redirect_to wines_path(recipe: @pairing.recipe.title)
+          end
+        }
       end
+
+
     else
       render "recipes/index", status: :unprocessable_entity
     end

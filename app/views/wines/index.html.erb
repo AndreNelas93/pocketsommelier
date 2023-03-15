@@ -41,10 +41,10 @@
 
       <p><%= wine.name %></p>
 
-      <%= form_with url: add_to_wishlist_pairings_path, method: "POST", data: { turbo: false } do |f| %>
+      <%= form_with url: add_to_wishlist_pairings_path, method: "POST", remote: true do |f| %>
         <%= f.hidden_field :wine_id, as: :hidden, value: wine.id %>
         <%= f.hidden_field :recipe_id, as: :hidden, value: @recipe.id %>
-        <%= f.button '<i class="fa-regular fa-bookmark"></i>'.html_safe, type: :submit, class: "round-button-mark" %>
+        <%= f.button '<i class="fa-regular fa-bookmark"></i>'.html_safe, type: :submit, class: "round-button-mark",  id: "wishlist-button", data: { controller:"favorite_button", action:"click->favorite_button#change_color" } %>
       <% end %>
     </div>
     <div class="button-container text-center mb-5 mt-4">
