@@ -12,7 +12,7 @@
 <%= link_to wines_path(recipe: @recipe.title) do %>
     <p class="btn-filter">All</p>
   <% end %>
-<% @colors.each do |color| %>
+<% @colors.uniq.each do |color| %>
   <%= link_to wines_path(color: color, recipe: @recipe.title) do %>
     <p class="btn-filter"><%= color %></p>
   <% end %>

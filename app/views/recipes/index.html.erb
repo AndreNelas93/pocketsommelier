@@ -8,23 +8,20 @@
   </div>
 
 <div class="container-filters">
-  <p class="btn-filter">all</p>
-  <p class="btn-filter">pizza/pasta</p>
-  <p class="btn-filter">seafood</p>
-  <p class="btn-filter">chicken</p>
-</div>
-<div class="container-filters-recipes">
-  <p class="btn-filter">beef</p>
-  <p class="btn-filter">snacks</p>
-  <p class="btn-filter">fish</p>
-  <p class="btn-filter">pork</p>
+  <%= link_to recipes_path(wine: @wine.name) do %>
+      <p class="btn-filter">All</p>
+    <% end %>
+  <% @tags.take(5).each do |tag| %>
+    <%= link_to recipes_path(filter: tag.name, wine: @wine.name) do %>
+      <p class="btn-filter"><%= tag.name %></p>
+    <% end %>
+  <% end %>
 </div>
 
 
 
 <div class="container-recipes">
-  <% @tags.each do |tag| %>
-    <% tag.recipes.each do |recipe| %>
+    <% @recipes.each do |recipe| %>
        <%= link_to recipe_path(recipe, wine_id: @wine) do %>
           <%= cl_image_tag recipe.photo.key, class: "img-recipe" %>
         <% end %>
@@ -47,6 +44,5 @@
           <% end %>
         </div>
     <% end %>
-  <% end %>
 </div>
 </div>
