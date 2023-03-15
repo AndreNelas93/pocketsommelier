@@ -13,7 +13,7 @@ class PagesController < ApplicationController
   end
 
   def cellar
-    @colors = ["Red","White","Rosé"]
+    @colors = ["Red", "White", "Rosé"]
     if params[:color]
       @wines = Wine.where(color: params[:color])
     else
