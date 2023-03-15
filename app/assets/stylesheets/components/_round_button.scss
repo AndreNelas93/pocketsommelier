@@ -10,6 +10,11 @@
   margin: 0 8px 0 8px;
 }
 
+.bookmarked{
+  background-color: rgb(197, 164, 170); ;
+  color: white !important;
+}
+
 .button-icon {
   color: white;
   height: 15px;
@@ -33,4 +38,10 @@
   border: none;
   margin-top: 5px;
   margin-right: 0px;
+
+}
+
+.round-button-mark::selection {
+  background-color: blue;
+  color: blue;
 }
