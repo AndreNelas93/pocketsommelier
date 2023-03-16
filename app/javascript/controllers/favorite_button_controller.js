@@ -7,6 +7,7 @@ export default class extends Controller {
   }
 
   change_color() {
-    this.element.classList.add("bookmarked");
+    this.element.classList.toggle("round-button-mark");
+    this.element.classList.toggle("bookmarked");
   }
-  };
+}
