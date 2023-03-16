@@ -19,6 +19,7 @@ class PairingsController < ApplicationController
     @pairing = Pairing.new(pairing_params)
     @pairing.user = current_user
     @pairing.done = true
+    @pairing.favorite = false
 
     if @pairing.save
       redirect_to pairing_path(@pairing)
