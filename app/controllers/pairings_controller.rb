@@ -57,7 +57,10 @@ class PairingsController < ApplicationController
   def update
     # mudar o status de saved para done (true/false)
     @pairing = Pairing.find(params[:id])
-    @pairing.update(pairing_params)
+    @pairing.done = true
+    @pairing.favorite = false
+    @pairing.save
+    redirect_to pairings_path
   end
 
   def destroy
