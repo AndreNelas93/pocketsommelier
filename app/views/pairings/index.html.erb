@@ -38,5 +38,10 @@
         </div>
       </div>
     <% end %>
+    <% if pairing.favorite  %>
+      <div class="d-flex justify-content-center">
+        <%= link_to "Mark as done", pairing_path(pairing), data: { turbo_method: :patch }, class: "btn-large-secondary px-3" %>
+      </div>
+    <% end %>
   <% end %>
 </div>
